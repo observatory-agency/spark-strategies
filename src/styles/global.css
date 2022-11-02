@@ -8,6 +8,7 @@ h5,
 h6 {
     font-family: 'Figtree', sans-serif;
     color: #1c1917;
+    scroll-behavior: smooth;
 }
 
 .flow {

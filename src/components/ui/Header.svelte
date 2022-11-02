@@ -3,13 +3,13 @@
     import { cubicOut } from 'svelte/easing';
 
     let navItems = [
-        { name: 'Services', anchor: '#services' },
+        { name: 'Services', anchor: '/#services' },
         {
             name: 'Profitable Studio Masterclass',
-            anchor: '#profitable-studio-masterclass',
+            anchor: '/#profitable-studio-masterclass',
         },
-        { name: 'About Us', anchor: '#about' },
-        { name: 'Free Mini Trainings', anchor: '#trainings' },
+        { name: 'About Us', anchor: '/#about' },
+        { name: 'Free Mini Trainings', anchor: '/#trainings' },
         { name: 'Media', anchor: '/media' },
         { name: 'Blog', anchor: '/blog' },
     ];
