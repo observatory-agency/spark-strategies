@@ -1,0 +1,33 @@
+---
+import ActionBox from "../ui/ActionBox.astro";
+---
+
+<section class="flex items-center justify-center bg">
+    <div class="z-50">
+        <ActionBox cta="Learn more!" link="/book-a-free-60-minute-studio-strategy-session">
+            <h4 class="text-4xl font-extrabold text-center">You are here to change lives -- including your own!</h4>
+            <p class="text-xl leading-normal text-center">Our custom business consulting programs are intensive containers for studio owners who are ready to STOP 'just getting by' and start COMMANDING more from their businesses.</p>
+        </ActionBox>
+    </div>
+</section>
+
+<style>
+    .bg {
+        position: relative;
+        height: 60vh;
+    }
+
+    .bg::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        background-image: url('/patterns/s-pattern.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>

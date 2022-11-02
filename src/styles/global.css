@@ -1,0 +1,24 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Figtree', sans-serif;
+    color: #1c1917;
+}
+
+.flow {
+    --flow-space: 1em;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
