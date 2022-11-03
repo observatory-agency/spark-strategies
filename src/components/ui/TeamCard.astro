@@ -1,9 +1,10 @@
 ---
+import { Picture } from '@astrojs/image/components';
 const {name, img, title, bio, facebook, insta, website, size} = Astro.props;
 ---
 
 <div>
-    <img src={img} alt={name} class={`${size} w-full object-cover object-center rounded-2xl` } />
+    <Picture src={img} alt={name} widths={[400, 800, 1200]} sizes="(max-width: 800px) 100vw, 800px" aspectRatio="3:2" class={`${size} rounded-2xl object-center object-cover`}/>
     <h4 class="mt-6 text-2xl font-semibold text-sparkHeader">{name}</h4>
     <span>{title}</span>
     <p class="my-4">{bio}</p>

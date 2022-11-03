@@ -1,44 +1,53 @@
 ---
+import { Picture } from '@astrojs/image/components';
+
+import Service from '../ui/Service.astro';
+
 let services = [
     {
         spark: 'Spark: Growth',
         service: 'Custom Business Consulting',
         description: 'Have a specific goal in mind or need a tuneup? Work with us on a customized short or long-term project to refine your brand and message, automate systems, build a budget, streamline your sales process, motivate your team, improve retention and drive big revenue.',
         link: '',
-        img: '',
-        sparkle: ''
+        img: 'growth',
+        sparkle: '',
+        alt: 'Woman doing stuff'
     },
     {
         spark: 'Spark: Creativity',
         service: 'Marketing Services',
         description: 'Work with us to develop client attraction, nurture and retention campaigns that convert. We offer strategy consulting as well as a full suite of "done-for-you" services including ad setup and management, email campaign design, social media strategy, website optimization and more. Focus on what you love and leave the rest to us.',
         link: '',
-        img: '',
-        sparkle: ''
+        img: 'creativity',
+        sparkle: '',
+        alt: 'Woman doing stuff'
     },
     {
         spark: 'Spark: Confidence',
         service: 'Leadership Coaching & Personal Development',
         description: 'We believe that an entrepreneur\'s business is a reflection of who they are. Work with our team of coaches to overcome limiting beliefs that hold you back in business (and in life!) so you can lead your team with confidence and rise to the next level with ease. Leverage your most powerful asset: your mindset!',
         link: '',
-        img: '',
-        sparkle: ''
+        img: 'confidence',
+        sparkle: '',
+        alt: 'Woman doing stuff'
     },
     {
         spark: 'Spark: Sales',
         service: 'Sales Training for Teams',
         description: 'Your front desk is a powerful force for your business: use it well! Hire us for a half-day training for your entire team. We\'ll teach industry best practices for building community, closing membership sales and increasing client value. Your staff will learn to build rapport, overcome objections and sell memberships with ease (and zero sleaze). ',
         link: '',
-        img: '',
-        sparkle: ''
+        img: 'sales',
+        sparkle: '',
+        alt: 'Woman doing stuff'
     },
     {
         spark: 'Spark: Results',
         service: 'The Studio SOS Program',
         description: 'The solution for Studio Owners who need a fix, fast. We’ll drill into your current systems and find your most pressing needs. Then, focus on one or two areas of your business in this potent 30 day container that includes private coaching and daily support as you execute your brilliant strategy. Need to change your pricing? Run your KPIs? Build a marketing campaign for your event or training? Sharpen up your staff? We have you covered.',
         link: '',
-        img: '',
-        sparkle: ''
+        img: 'results',
+        sparkle: '',
+        alt: 'Woman doing stuff'
     },
 ]
 ---
@@ -52,37 +61,8 @@ let services = [
                 Our Services
             </h3>
         </div>
-
         {services.map((service) => (
-            <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-                <div class="relative">
-                    <h2 class="text-lg font-bold uppercase text-sparkRaspberry">{service.spark}</h2>
-                    <h4
-                        class="text-2xl font-medium leading-8 tracking-tight text-headerDark sm:text-3xl sm:leading-9 dash-trail"
-                    >
-                        {service.service}
-                    </h4>
-                    <p class="mt-3 text-lg leading-8 text-bodyCopyDark">
-                        {service.description}
-                    </p>
-                    <a
-                        href={service.link}
-                        target="_blank"
-                        rel="noopener"
-                        class="block mt-4 text-lg underline text-primaryColor hover:text-primaryColorDark"
-                        >Learn more</a>
-                </div>
-
-                <div class="relative mt-10 lg:mt-0">
-                    <img
-                        class="relative mx-auto rounded-lg shadow-xl"
-                        width="490"
-                        src={service.img}
-                        alt="Discovery Session"
-                    />
-                </div>
-            </div>
+            <Service {...service} />
         ))}
-
     </div>
 </section>
