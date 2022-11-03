@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/LandingPage.astro';
 import ActionBox from "../components/ui/ActionBox.astro";
+import BgPattern from "../components/ui/BgPattern.astro";
 import SingleTestimonial from '../components/ui/SingleTestimonial.astro';
 import CTA from '../components/homepage/CTA.astro';
 
@@ -20,53 +21,86 @@ let courtney = {
 ---
 
 <Layout title="Book a Free 60 Minute Studio Strategy Session | Spark Strategies">
-    <main class="mt-32">
-        <section>
-            <ActionBox cta="Schedule my free call" link="https://calendly.com/nicole-dandrea/60-min-studio-strategy-session-with-nicole-d-andrea">
-                <h1 class="text-[64px] leading-none font-extrabold">Book a Free 60 Minute Studio <span class="font-display">Strategy Session</span></h1>
-                <p class="text-xl leading-normal">We’re your team of Savvy Strategists, Marketing Minds & Industry Changemakers commited to helping your business <span class="font-bold">thrive.</span></p>
-            </ActionBox>
+    <main class="mt-12 sm:mt-24">
+        <section class="px-4 mb-12 overflow-hidden sm:py-16">
+            <div class="relative flex flex-col justify-end mx-auto sm:flex-row max-w-7xl">
+                <div class="lg:absolute -left-16 top-28">
+                    <ActionBox cta="Schedule my free call" link="https://calendly.com/nicole-dandrea/60-min-studio-strategy-session-with-nicole-d-andrea" full={false}>
+                        <div class="flow">
+                            <h1 class="text-3xl sm:text-[64px] leading-none font-extrabold">Book a Free 60 Minute Studio <br /><span class="relative z-10 font-display brush">Strategy Session</span></h1>
+                            <p class="text-xl leading-normal">We’re your team of Savvy Strategists, Marketing Minds & Industry Changemakers commited to helping your business <span class="font-bold">thrive.</span></p>
+                        </div>
+                    </ActionBox>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/observatory-agency/image/upload/v1667497425/clients/spark-strategies/lp-hero_hoqual.jpg" alt="" class="sm:max-w-[956px] rounded-[40px]">
+                </div>
+                <BgPattern color="#005370" large={true}/>
+            </div>
         </section>
+
         <SingleTestimonial person={karyna} side={"left"}/>
+
         <section>
-            <div class="py-12 bg-white">
+            <div class="pt-8 pb-12 sm:pb-24">
                 <div class="max-w-xl px-4 mx-auto space-y-10 sm:px-6 lg:max-w-7xl lg:px-8">
-                  <h2 class="text-4xl font-bold text-sparkHeader">During this 60-minute meeting, you'll get:</h2>
+                  <h2 class="text-2xl font-bold sm:text-4xl text-sparkHeader">During this 60-minute meeting, you'll get:</h2>
                   <dl class="space-y-10 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
                     <div>
                       <dt>
-                        <div class="flex items-center justify-center w-12 h-12 text-white rounded-md bg-sparkBlue">
-                          <!-- Heroicon name: outline/globe-alt -->
-                          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                        <div class="flex items-center justify-center text-white rounded-md w-14 h-14 bg-sparkBlue">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" class="w-8 h-8" aria-hidden="true">
+                            <g stroke="#FFF5EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" clip-path="url(#a)">
+                              <path d="M9.10399 62.0001c3.84831 0 6.96801-3.1197 6.96801-6.968s-3.1197-6.968-6.96801-6.968c-3.84832 0-6.968 3.1197-6.968 6.968s3.11968 6.968 6.968 6.968ZM38.6347 48.4535h-13.272v13.272h13.272v-13.272ZM61.864 61.7254H45.936l7.9627-14.6 7.9653 14.6ZM41.9546 12.2267c.0031-1.7955-.4794-3.55835-1.3965-5.10193-.9172-1.54358-2.2347-2.81038-3.8131-3.66622-1.5783-.85584-3.3588-1.26886-5.1528-1.19531s-3.5346.63093-5.0377 1.6131c-1.503.98217-2.7124 2.35256-3.5001 3.96604-.7877 1.61347-1.1243 3.40992-.9743 5.19912.1501 1.7892.7813 3.5045 1.8267 4.9642 1.0454 1.4598 2.4662 2.6096 4.1118 3.3277v4.8293h7.9627v-4.8293c1.7733-.7727 3.2829-2.0457 4.3438-3.6632 1.0609-1.6174 1.6272-3.5091 1.6295-5.4435v0ZM9.43735 41.1519v-6.6347H54.5627v6.6347M52.7333 13.944h3.9813m-4.8053 9.1306 2.8134 2.816M51.9093 4.816 54.7227 2M11.2666 13.944H7.28531m4.80539 9.1306-2.81604 2.816M12.0907 4.816 9.27466 2M32 26.1627v13.664"/>
+                            </g>
+                            <defs>
+                              <clipPath id="a">
+                                <path fill="#fff" d="M0 0h64v64H0z"/>
+                              </clipPath>
+                            </defs>
                           </svg>
                         </div>
                       </dt>
-                      <dd class="mt-2 text-lg text-sparkBody">An in-depth review of your business strategies to discover what’s working and what needs to be changed</dd>
+                      <dd class="mt-4 text-lg text-sparkBody">An in-depth review of your business strategies to discover what’s working and what needs to be changed</dd>
                     </div>
 
                     <div>
                       <dt>
-                        <div class="flex items-center justify-center w-12 h-12 text-white rounded-md bg-sparkBlue">
-                          <!-- Heroicon name: outline/scale -->
-                          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+                        <div class="flex items-center justify-center text-white rounded-md w-14 h-14 bg-sparkBlue">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" class="w-8 h-8" aria-hidden="true">
+                            <g stroke="#FFF5EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" clip-path="url(#a)">
+                              <path d="M11.3334 38c-.8393-.0001-1.65741.2638-2.33843.7543-.68103.4906-1.19049 1.1829-1.45627 1.979l-5.33334 16c-.20076.6014-.25571 1.2419-.16029 1.8687s.33846 1.2219.70908 1.7363c.37063.5144.85822.9333 1.42257 1.2222.56436.289 1.1893.4396 1.82331.4395H58c.634.0001 1.259-.1505 1.8233-.4395.5644-.2889 1.052-.7078 1.4226-1.2222.3706-.5144.6137-1.1095.7091-1.7363.0954-.6268.0405-1.2673-.1603-1.8687l-5.3333-16c-.2658-.7961-.7753-1.4884-1.4563-1.979-.681-.4905-1.4991-.7544-2.3384-.7543"/>
+                              <path d="M50 20c0 8.6667-13.6853 28.072-17.1893 32.896-.0928.1278-.2145.2318-.3551.3035-.1407.0718-.2964.1092-.4543.1092-.1579 0-.3135-.0374-.4542-.1092-.1407-.0717-.2624-.1757-.3551-.3035C27.688 48.072 14 28.6667 14 20c0-4.7739 1.8964-9.3523 5.2721-12.72792C22.6477 3.89642 27.2261 2 32 2s9.3523 1.89642 12.7279 5.27208C48.1036 10.6477 50 15.2261 50 20v0Z"/>
+                              <path d="M37 14h-7c-.8326-.0026-1.6401.2853-2.2831.8143-.643.5289-1.0813 1.2656-1.2393 2.0831-.158.8175-.0258 1.6645.3738 2.3949.3996.7305 1.0416 1.2986 1.8153 1.6064l7.08 2.2c.7725.309 1.4132.8776 1.8119 1.6079.3986.7303.5304 1.5767.3726 2.3936-.1579.8169-.5954 1.5533-1.2374 2.0826-.6421.5292-1.4484.8182-2.2805.8172H26m6-16v-4m0 24v-4"/>
+                            </g>
+                            <defs>
+                              <clipPath id="a">
+                                <path fill="#fff" d="M0 0h64v64H0z"/>
+                              </clipPath>
+                            </defs>
                           </svg>
                         </div>
                       </dt>
-                      <dd class="mt-2 text-lg text-sparkBody">A roadmap with actionable steps to implement these changes and start hitting your business profit growth goals</dd>
+                      <dd class="mt-4 text-lg text-sparkBody">A roadmap with actionable steps to implement these changes and start hitting your business profit growth goals</dd>
                     </div>
 
                     <div>
                       <dt>
-                        <div class="flex items-center justify-center w-12 h-12 text-white rounded-md bg-sparkBlue">
-                          <!-- Heroicon name: outline/bolt -->
-                          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                        <div class="flex items-center justify-center text-white rounded-md w-14 h-14 bg-sparkBlue">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" class="w-8 h-8" aria-hidden="true">
+                            <g stroke="#FFF5EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" clip-path="url(#a)">
+                              <path d="M14 18H6c-1.06087 0-2.07828.4214-2.82843 1.1716C2.42143 19.9217 2 20.9391 2 22v36c0 1.0609.42143 2.0783 1.17157 2.8284C3.92172 61.5786 4.93913 62 6 62h48c1.0609 0 2.0783-.4214 2.8284-1.1716C57.5786 60.0783 58 59.0609 58 58V32M2 30h8"/>
+                              <path d="M2 50h14v12m30-12h12M2 40h24v6m0 8v8m16-26v6m10-19.9998c0-1.8029-.4875-3.5723-1.4107-5.1208-.9233-1.5486-2.248-2.8187-3.834-3.676-1.586-.8574-3.3743-1.27-5.1756-1.1942-1.8013.0758-3.5486.6371-5.057 1.6246-1.5084.9875-2.7218 2.3644-3.5117 3.9851-.7899 1.6206-1.1271 3.4246-.9757 5.2211.1514 1.7966.7857 3.5187 1.8357 4.9843 1.0499 1.4656 2.4766 2.6201 4.129 3.3412v4.8347h8v-4.8347c1.7832-.7786 3.3005-2.0603 4.3662-3.6883 1.0657-1.6279 1.6335-3.5313 1.6338-5.477v0ZM42 2v4m14.1412 1.85876-2.8266 2.82664M62 22h-4M27.8588 7.85876l2.8266 2.82664M22 22h4"/>
+                            </g>
+                            <defs>
+                              <clipPath id="a">
+                                <path fill="#fff" d="M0 0h64v64H0z"/>
+                              </clipPath>
+                            </defs>
                           </svg>
                         </div>
                       </dt>
-                      <dd class="mt-2 text-lg text-sparkBody">A personalized blueprint on maximizing those profits while stepping back to get more time for yourself</dd>
+                      <dd class="mt-4 text-lg text-sparkBody">A personalized blueprint on maximizing those profits while stepping back to get more time for yourself</dd>
                     </div>
                   </dl>
                 </div>
@@ -78,7 +112,7 @@ let courtney = {
                 <div class="absolute inset-x-0 bottom-0 h-80 xl:top-0 xl:h-full">
                   <div class="w-full h-full xl:grid xl:grid-cols-2">
                     <div class="h-full xl:relative xl:col-start-2">
-                      <img class="object-cover w-full h-full opacity-25 xl:absolute xl:inset-0" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100" alt="People working on laptops">
+                      <img class="object-cover w-full h-full opacity-25 xl:absolute xl:inset-0" src="https://res.cloudinary.com/observatory-agency/image/upload/v1667502157/clients/spark-strategies/results_rrlojm.jpg" alt="People working on laptops">
                       <div aria-hidden="true" class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-sparkBlue xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"></div>
                     </div>
                   </div>
@@ -110,12 +144,55 @@ let courtney = {
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
         </section>
-        <SingleTestimonial person={courtney} side={"right"}/>
+
+        <SingleTestimonial person={courtney} side={"right"} />
+
+        <section class="px-4 py-12 mb-12 overflow-hidden sm:py-24">
+            <div class="relative mx-auto max-w-7xl">
+                <div class="grid grid-cols-1 gap-16 lg:grid-cols-2">
+                    <div class="flow">
+                        <h2 class="text-4xl font-display text-sparkHeader">About Us</h2>
+                        <p>Hi! We are Spark Strategies: a team of Business Consultants, Strategists and Marketing Minds with one goal: to help women of the wellness world STOP undervaluing themselves are their businesses.</p>
+                        <p>We help our entrepreneurs think bigger, work smarter and create improved commercial success so they can enjoy the financial freedom to live out their life dreams - whatever those dreams may be.</p>
+                        <p>Spark Strategies was founded by Nicole D'Andrea in 2018. As a successful studio owner herself, she uncovered a deep need for professionalization in the wellness world  - especially amongst women. So, she leveraged her strategic sixth sense, first-hand experience and bigger vision for the industry to help others build and sustain profitable businesses of their own.</p>
+                        <p>To date, we've served hundreds of boutique fitness studios. Our consulting business is our means of empowering others to grow their mindsets AND their bottom lines.</p>
+                        <p>Ready to thrive? We can't wait to meet you.</p>
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/observatory-agency/image/upload/v1667498569/clients/spark-strategies/profitable-studio_mlksmu.jpg" alt="Nicole D'Andrea" class="rounded-2xl">
+                    </div>
+                </div>
+                <BgPattern color="#005370" large={false}/>
+            </div>
+        </section>
+
         <CTA />
-        <footer>
-            <p>footer</p>
+
+        <footer class="px-4 py-6 mt-6 border-t border-opacity-25 sm:py-6 border-sparkHeader">
+            <p class="text-center">Still have questions? Email, or chat with us. We are happy to help!</p>
         </footer>
     </main>
 </Layout>
+
+<style lang="scss">
+    .brush::before {
+        content: ' ';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 500px;
+        height: 65px;
+        opacity: 1;
+        z-index: -1;
+        background-image: url('/patterns/brush.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @media screen and (max-width: 1280px) {
+            width: 235px;
+            height: 30px;
+        }
+    }
+</style>

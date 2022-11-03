@@ -1,8 +1,8 @@
 ---
-const {cta, link} = Astro.props;
+const {cta, link, full} = Astro.props;
 ---
 
 <div class="bg-white rounded-[40px] shadow-lg px-8 py-10 max-w-2xl">
     <slot />
-    <a href={link} target="_blank" class="items-center px-8 py-1 text-lg font-semibold rounded shadow-sm sm:inline-flex text-sparkPeach bg-sparkBlue font-body border-secondaryColor text-secondaryColor hover:bg-secondaryColor hover:text-primaryColor focus:outline-none focus:ring-2 focus:ring-secondaryColorDark focus:ring-offset-2">{cta}</a>
+    <a href={link} target="_blank" class={`${full === true ? 'w-full'  : '' } inline-block text-center items-center px-8 py-1 mt-8 text-lg font-semibold rounded shadow-sm text-sparkPeach bg-sparkBlue font-body border-secondaryColor text-secondaryColor hover:bg-secondaryColor hover:text-primaryColor focus:outline-none focus:ring-2 focus:ring-secondaryColorDark focus:ring-offset-2`}>{cta}</a>
 </div>

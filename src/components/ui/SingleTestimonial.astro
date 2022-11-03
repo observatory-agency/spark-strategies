@@ -1,15 +1,13 @@
 ---
 const {person, side} = Astro.props;
 ---
-<div class="pt-16 bg-white lg:py-24">
+<div class="pt-16 lg:py-24">
     <div class="pb-16 bg-sparkRaspberry lg:relative lg:z-10 lg:pb-0">
       <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
         <div class={`${side === 'left' ? 'order-1' : 'order-2' } relative lg:-my-8`}>
           <div aria-hidden="true" class="absolute inset-x-0 top-0 bg-white h-1/2 lg:hidden"></div>
           <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
-            <div class="overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-              <img class="object-cover lg:h-full lg:w-full" src={person.img} alt={person.name}>
-            </div>
+            <img class="object-cover object-center lg:h-full lg:w-full rounded-2xl" src={person.img} alt={person.name}>
           </div>
         </div>
         <div class={`${side === 'left' ? 'order-2' : 'order-1' } mt-12 lg:col-span-2 lg:m-0 lg:pl-8`}>

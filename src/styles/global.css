@@ -12,7 +12,7 @@ h6 {
 }
 
 .flow {
-    --flow-space: 1em;
+    --flow-space: 1.5rem;
 }
 
 .flow > * + * {
