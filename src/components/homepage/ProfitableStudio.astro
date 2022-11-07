@@ -38,8 +38,8 @@ let days = [
             <p>Inside the 5 Day Profitable Studio Masterclass you'll find:</p>
         </div>
     </div>
-    <div class="max-w-6xl mx-auto mt-12">
-        <div class="flex flex-col gap-36">
+    <div class="max-w-6xl px-4 mx-auto mt-12">
+        <div class="flex flex-col gap-6 lg:gap-36">
             {days.map(day => (
                 <aside class="relative max-w-lg py-6 even:self-end">
                     <span class="text-lg font-semibold uppercase text-sparkRaspberry">{day.day}</span>
@@ -59,7 +59,7 @@ let days = [
     </div>
 </section>
 
-<style>
+<style lang="scss">
     .bg::before {
         content: ' ';
         position: absolute;
@@ -74,28 +74,32 @@ let days = [
         background-repeat: no-repeat;
     }
 
-    aside:nth-last-child(even)::after {
-        content: url('/patterns/arrow-right.svg');
-        position: absolute;
-        top: calc(100% - -1rem);
-        left: calc(100% - 15rem);
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    aside:nth-last-child(odd)::after {
-        content: url('/patterns/arrow-left.svg');
-        position: absolute;
-        top: calc(100% - -1rem);
-        right: calc(100% - 10rem);
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    aside {
+        @media (min-width: 768px) {
+            &:nth-last-child(even)::after {
+            content: url('/patterns/arrow-right.svg');
+            position: absolute;
+            top: calc(100% - -1rem);
+            left: calc(100% - 15rem);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+            &:nth-last-child(odd)::after {
+                content: url('/patterns/arrow-left.svg');
+                position: absolute;
+                top: calc(100% - -1rem);
+                right: calc(100% - 10rem);
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
     }
 </style>

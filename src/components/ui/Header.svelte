@@ -169,7 +169,7 @@
         position: absolute;
         width: 32px;
         height: 2.25px;
-        background: #ffffff;
+        background: #1c1917;
         border-radius: 9999px;
     }
     .bg-white .nav-trigger span,
@@ -178,7 +178,7 @@
         position: absolute;
         width: 32px;
         height: 2.25px;
-        background: #29323f;
+        background: #1c1917;
         border-radius: 9999px;
     }
 
@@ -209,7 +209,7 @@
     }
 
     .navOpen .nav-trigger span::before {
-        transform: rotate(-95deg);
+        transform: rotate(-92deg);
     }
 
     .navOpen .nav-trigger span::after {
