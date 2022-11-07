@@ -1,13 +1,8 @@
 import { defineConfig } from 'astro/config';
-
-// https://astro.build/config
 import tailwind from '@astrojs/tailwind';
-
-// https://astro.build/config
 import svelte from '@astrojs/svelte';
-
-// https://astro.build/config
 import image from '@astrojs/image';
+import storyblok from '@storyblok/astro';
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,6 +11,14 @@ export default defineConfig({
         svelte(),
         image({
             serviceEntryPoint: '@astrojs/image/sharp',
+        }),
+        storyblok({
+            accessToken: '4UrbyMFHLg5o1FKV9ylQzwtt',
+            components: {
+                page: 'storyblok/Page',
+                blogpost: 'storyblok/Blog',
+                postList: 'storyblok/PostList',
+            },
         }),
     ],
 });

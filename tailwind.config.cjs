@@ -14,6 +14,7 @@ module.exports = {
             },
             fontFamily: {
                 display: ['Mikela', 'sans-serif'],
+                body: ['Figtree', 'sans-serif'],
             },
         },
     },

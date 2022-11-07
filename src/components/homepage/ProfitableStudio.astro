@@ -1,7 +1,101 @@
 ---
+import ActionBox from '../../components/ui/ActionBox.astro';
 
+let days = [
+    {
+        day: 'Day 1',
+        title: 'The Motivation Mindset',
+        description: 'How to prioritize and clear the space you need in your schedule and in your mind to be the creator and leader you were meant to be.'
+    },
+    {
+        day: 'Day 2',
+        title: 'A Powerful Product',
+        description: 'How to level up your product: the offerings themselves. We hate to break it to you, but your regular ol\' classes just won\'t cut it in the long run.'
+    },
+    {
+        day: 'Day 3',
+        title: 'Perfect Pricing',
+        description: 'The pricing strategy that\'s working right. now. in today\'s brand new market. Hint: it isn\'t measuring yourself up against your competition.'
+    },
+    {
+        day: 'Day 4',
+        title: 'Staff Synergy',
+        description: 'How to motivate your team into real ACTION. Shiny, happy staff = shiny, happy clients.'
+    },
+    {
+        day: 'Day 5',
+        title: 'Mindful Marketing',
+        description: 'Actionable strategy you can implement TODAY to generate new leads and keep prospective clients from slipping through the cracks.'
+    },
+]
 ---
 
-<section id="profitable-studio-masterclass">
-    <h2>The Five Day Profitable Studio Masterclass</h2>
+<section id="profitable-studio-masterclass" class="relative py-12 bg sm:py-24">
+    <div class="text-center flow">
+        <h2 class="text-4xl font-display text-sparkHeader">The Five Day Profitable Studio Masterclass</h2>
+        <div>
+            <p>Ready to get your studio out of survival mode without breaking the bank?</p>
+            <p>Inside the 5 Day Profitable Studio Masterclass you'll find:</p>
+        </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-12">
+        <div class="flex flex-col gap-36">
+            {days.map(day => (
+                <aside class="relative max-w-lg py-6 even:self-end">
+                    <span class="text-lg font-semibold uppercase text-sparkRaspberry">{day.day}</span>
+                    <h4 class="text-3xl font-bold text-sparkHeader">{day.title}</h4>
+                    <p class="text-sparkBody">{day.description}</p>
+                </aside>
+            ))}
+            <div class="self-end mt-12">
+                <ActionBox cta="Get access" link={"https://coach.nicoledandreaconsulting.com/offers/Fxzfcznn/checkout"} full={true}>
+                    <div class="flow">
+                        <h4 class="text-2xl font-extrabold text-center sm:text-5xl font-display">$99<span class="text-sm font-body">usd</span></h4>
+                        <p class="text-xl leading-normal text-center">You'll get all the recordings, so you can move at your own pace, but our guess is you'll want to move FAST. You'll also find PDFs, chock full of the type of homework that actually yields RESULTS.</p>
+                    </div>
+                </ActionBox>
+            </div>
+        </div>
+    </div>
 </section>
+
+<style>
+    .bg::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url('/patterns/spark-pattern.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    aside:nth-last-child(even)::after {
+        content: url('/patterns/arrow-right.svg');
+        position: absolute;
+        top: calc(100% - -1rem);
+        left: calc(100% - 15rem);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    aside:nth-last-child(odd)::after {
+        content: url('/patterns/arrow-left.svg');
+        position: absolute;
+        top: calc(100% - -1rem);
+        right: calc(100% - 10rem);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
