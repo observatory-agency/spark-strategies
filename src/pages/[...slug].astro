@@ -6,7 +6,7 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 export async function getStaticPaths() {
     const storyblokApi = useStoryblokApi();
     const { data } = await storyblokApi.get('cdn/stories/', {
-        version: import.meta.env.DEV ? 'draft' : 'published',
+        version: 'published',
     });
     const pages = data.stories.map((story) => {
         return {
