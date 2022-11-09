@@ -3,7 +3,7 @@ import { useStoryblokApi } from '@storyblok/astro';
 
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get('cdn/stories/', {
-    version: 'published',
+    version: import.meta.env.DEV ? 'draft' : 'published',
     content_type: 'Blog',
     resolve_relations: 'Author',
 });
