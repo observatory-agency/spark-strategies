@@ -4,9 +4,12 @@ import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 
 export async function getStaticPaths() {
-    const storyblokApi = useStoryblokApi();
-    const { data } = await storyblokApi.get('cdn/stories/', {
-        version: import.meta.env.DEV ? 'draft' : 'published',
+    const { client, accessToken } = useStoryblokApi()
+    const { data } = await client.get('cdn/stories/', {
+        params: {
+            version: 'published',
+            token: accessToken,
+        }
     });
     const pages = data.stories.map((story) => {
         return {
@@ -23,8 +26,8 @@ export async function getStaticPaths() {
     return pages;
 }
 const { content } = Astro.props;
-
 ---
+
 <Layout title={`${content.title} | Spark Strategies`}>
     <StoryblokComponent blok={content} />
 </Layout>
