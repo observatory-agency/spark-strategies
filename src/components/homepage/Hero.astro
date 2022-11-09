@@ -1,22 +1,38 @@
 ---
-import ActionBox from "../ui/ActionBox.astro";
-import BgPattern from "../ui/BgPattern.astro";
+import ActionBox from '../ui/ActionBox.astro';
+import BgPattern from '../ui/BgPattern.astro';
 ---
 
 <section class="py-4 overflow-hidden sm:py-20">
     <div class="relative flex justify-end mx-auto max-w-7xl">
         <div class="absolute left-0 top-12 @lg:hidden">
-            <ActionBox cta="Book now" link="https://calendly.com/nicole-dandrea/60-min-studio-strategy-session-with-nicole-d-andrea">
-                <h1 class="text-2xl lg:text-[64px] leading-none font-extrabold">Is your boutique fitness studio ready to <span class="relative z-10 font-display brush">grow?</span></h1>
-                <p class="text-xl leading-normal">We’re your team of Savvy Strategists, Marketing Minds & Industry Changemakers commited to helping your business thrive. Book a free 60 minute Studio Strategy Session today.</p>
+            <ActionBox
+                cta="Book now"
+                link="https://calendly.com/nicole-dandrea/60-min-studio-strategy-session-with-nicole-d-andrea"
+            >
+                <h1 class="text-2xl lg:text-[64px] leading-none font-extrabold">
+                    Is your boutique fitness studio ready to <span
+                        class="relative z-10 font-display brush">grow?</span>
+                </h1>
+                <p class="text-xl leading-normal">
+                    We’re your team of Savvy Strategists, Marketing Minds & Industry Changemakers
+                    commited to helping your business thrive. Book a free 60 minute Studio Strategy
+                    Session today.
+                </p>
             </ActionBox>
         </div>
         <div>
             <video muted autoplay loop class="max-w-4xl rounded-[32px]">
-                <source src="https://res.cloudinary.com/observatory-agency/video/upload/v1667337891/clients/spark-strategies/hero-video.mp4" type="video/mp4">
+                <source
+                    src="https://res.cloudinary.com/observatory-agency/video/upload/v1667337891/clients/spark-strategies/hero-video.mp4"
+                    type="video/mp4"
+                />
             </video>
         </div>
-        <div class="h-[664px] bg-sparkRaspberry -z-10 max-w-lg w-2/5 rounded-tl-3xl rounded-bl-3xl absolute left-full hidden -translate-x-3/4 -translate-y-20 transform lg:block"></div>
+        <div
+            class="h-[664px] bg-sparkRaspberry -z-10 max-w-lg w-2/5 rounded-tl-3xl rounded-bl-3xl absolute left-full hidden -translate-x-3/4 -translate-y-20 transform lg:block"
+        >
+        </div>
     </div>
 </section>
 

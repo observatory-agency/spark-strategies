@@ -9,21 +9,23 @@ interface Props {
     class: string;
 }
 
-const {src, ...props} = Astro.props;
+const { src, ...props } = Astro.props;
 
 const cld = new Cloudinary({
-  cloud: {
-    cloudName: 'observatory-agency'
-  }
+    cloud: {
+        cloudName: 'observatory-agency',
+    },
 });
 
-let cldSrc = cld.image(src).format('auto').delivery('q_auto').resize(`c_crop,w_${props.width},h_${props.height},g_face`);
+let cldSrc = cld
+    .image(src)
+    .format('auto')
+    .delivery('q_auto')
+    .resize(`c_crop,w_${props.width},h_${props.height},g_face`);
 
 if (src.startsWith('https://')) {
     cldSrc.setDeliveryType('fetch');
 }
-
-
 ---
 
 <img src={cldSrc.toURL()} loading="lazy" {...props} />

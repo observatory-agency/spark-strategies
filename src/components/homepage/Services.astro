@@ -7,49 +7,54 @@ let services = [
     {
         spark: 'Spark: Growth',
         service: 'Custom Business Consulting',
-        description: 'Have a specific goal in mind or need a tuneup? Work with us on a customized short or long-term project to refine your brand and message, automate systems, build a budget, streamline your sales process, motivate your team, improve retention and drive big revenue.',
+        description:
+            'Have a specific goal in mind or need a tuneup? Work with us on a customized short or long-term project to refine your brand and message, automate systems, build a budget, streamline your sales process, motivate your team, improve retention and drive big revenue.',
         link: '',
         img: 'growth',
         sparkle: '',
-        alt: 'Woman doing stuff'
+        alt: 'Woman doing stuff',
     },
     {
         spark: 'Spark: Creativity',
         service: 'Marketing Services',
-        description: 'Work with us to develop client attraction, nurture and retention campaigns that convert. We offer strategy consulting as well as a full suite of "done-for-you" services including ad setup and management, email campaign design, social media strategy, website optimization and more. Focus on what you love and leave the rest to us.',
+        description:
+            'Work with us to develop client attraction, nurture and retention campaigns that convert. We offer strategy consulting as well as a full suite of "done-for-you" services including ad setup and management, email campaign design, social media strategy, website optimization and more. Focus on what you love and leave the rest to us.',
         link: '',
         img: 'creativity',
         sparkle: '',
-        alt: 'Woman doing stuff'
+        alt: 'Woman doing stuff',
     },
     {
         spark: 'Spark: Confidence',
         service: 'Leadership Coaching & Personal Development',
-        description: 'We believe that an entrepreneur\'s business is a reflection of who they are. Work with our team of coaches to overcome limiting beliefs that hold you back in business (and in life!) so you can lead your team with confidence and rise to the next level with ease. Leverage your most powerful asset: your mindset!',
+        description:
+            "We believe that an entrepreneur's business is a reflection of who they are. Work with our team of coaches to overcome limiting beliefs that hold you back in business (and in life!) so you can lead your team with confidence and rise to the next level with ease. Leverage your most powerful asset: your mindset!",
         link: '',
         img: 'confidence',
         sparkle: '',
-        alt: 'Woman doing stuff'
+        alt: 'Woman doing stuff',
     },
     {
         spark: 'Spark: Sales',
         service: 'Sales Training for Teams',
-        description: 'Your front desk is a powerful force for your business: use it well! Hire us for a half-day training for your entire team. We\'ll teach industry best practices for building community, closing membership sales and increasing client value. Your staff will learn to build rapport, overcome objections and sell memberships with ease (and zero sleaze). ',
+        description:
+            "Your front desk is a powerful force for your business: use it well! Hire us for a half-day training for your entire team. We'll teach industry best practices for building community, closing membership sales and increasing client value. Your staff will learn to build rapport, overcome objections and sell memberships with ease (and zero sleaze). ",
         link: '',
         img: 'sales',
         sparkle: '',
-        alt: 'Woman doing stuff'
+        alt: 'Woman doing stuff',
     },
     {
         spark: 'Spark: Results',
         service: 'The Studio SOS Program',
-        description: 'The solution for Studio Owners who need a fix, fast. We’ll drill into your current systems and find your most pressing needs. Then, focus on one or two areas of your business in this potent 30 day container that includes private coaching and daily support as you execute your brilliant strategy. Need to change your pricing? Run your KPIs? Build a marketing campaign for your event or training? Sharpen up your staff? We have you covered.',
+        description:
+            'The solution for Studio Owners who need a fix, fast. We’ll drill into your current systems and find your most pressing needs. Then, focus on one or two areas of your business in this potent 30 day container that includes private coaching and daily support as you execute your brilliant strategy. Need to change your pricing? Run your KPIs? Build a marketing campaign for your event or training? Sharpen up your staff? We have you covered.',
         link: '',
         img: 'results',
         sparkle: '',
-        alt: 'Woman doing stuff'
+        alt: 'Woman doing stuff',
     },
-]
+];
 ---
 
 <section id="services" class="py-16 overflow-hidden bg-white lg:py-24 scroll-mt-12">
@@ -61,8 +66,6 @@ let services = [
                 Our Services
             </h3>
         </div>
-        {services.map((service) => (
-            <Service {...service} />
-        ))}
+        {services.map((service) => <Service {...service} />)}
     </div>
 </section>

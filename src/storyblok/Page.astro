@@ -1,13 +1,13 @@
 ---
-import { storyblokEditable } from '@storyblok/astro'
-import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
-const { blok } = Astro.props
+import { storyblokEditable } from '@storyblok/astro';
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
+const { blok } = Astro.props;
 ---
 
-<div {...storyblokEditable(blok)}>
-  {
-    blok.body?.map((blok: any) => {
-      return <StoryblokComponent blok={blok} />
-    })
-  }
-</div>
+<main {...storyblokEditable(blok)} class="max-w-7xl mx-auto px-4">
+    {
+        blok.body?.map((blok) => {
+            return <StoryblokComponent blok={blok} />;
+        })
+    }
+</main>

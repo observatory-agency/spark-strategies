@@ -20,9 +20,17 @@ const { spark, service, description, link, img, sparkle, alt } = Astro.props;
             target="_blank"
             rel="noopener"
             class="inline-block px-4 py-2 mt-4 text-lg border rounded-md text-sparkBlue hover:bg-sparkBlue hover:text-white border-sparkBlue"
-            >Learn more</a>
+            >Learn more</a
+        >
     </div>
     <div class="relative mt-10 lg:mt-0">
-        <Picture src={`/services/${img}.jpg`} alt={alt} widths={[400, 800, 1200]} sizes="(max-width: 800px) 100vw, 800px" aspectRatio="3:2" class="object-cover object-center mx-auto rounded-lg shadow-xl"/>
+        <Picture
+            src={`/services/${img}.jpg`}
+            alt={alt}
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 800px) 100vw, 800px"
+            aspectRatio="3:2"
+            class="object-cover object-center mx-auto rounded-lg shadow-xl"
+        />
     </div>
 </div>

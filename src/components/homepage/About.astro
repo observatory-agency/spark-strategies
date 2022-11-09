@@ -1,31 +1,84 @@
 ---
 import { Picture } from '@astrojs/image/components';
-import TeamCard from '../ui/TeamCard.astro'
+import TeamCard from '../ui/TeamCard.astro';
 
-import Nicole from '../../img/team/nicole.jpg'
-import Jenn from '../../img/team/jenn.jpg'
-import Aida from '../../img/team/aida.jpg'
-import Juliana from '../../img/team/juliana.jpg'
+import Nicole from '../../img/team/nicole.jpg';
+import Jenn from '../../img/team/jenn.jpg';
+import Aida from '../../img/team/aida.jpg';
+import Juliana from '../../img/team/juliana.jpg';
 ---
 
 <section id="about" class="px-4 mx-auto max-w-7xl py-14 sm:py-28 scroll-mt-6">
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div class="flow">
             <h2 class="text-4xl font-display text-sparkHeader">About Us</h2>
-            <p>Hi! We are Spark Strategies: a team of Business Consultants, Strategists and Marketing Minds with one goal: to help women of the wellness world STOP undervaluing themselves are their businesses.</p>
-            <p>We help our entrepreneurs think bigger, work smarter and create improved commercial success so they can enjoy the financial freedom to live out their life dreams - whatever those dreams may be.</p>
-            <p>Spark Strategies was founded by Nicole D'Andrea in 2018. As a successful studio owner herself, she uncovered a deep need for professionalization in the wellness world  - especially amongst women. So, she leveraged her strategic sixth sense, first-hand experience and bigger vision for the industry to help others build and sustain profitable businesses of their own.</p>
-            <p>To date, we've served hundreds of boutique fitness studios. Our consulting business is our means of empowering others to grow their mindsets AND their bottom lines.</p>
+            <p>
+                Hi! We are Spark Strategies: a team of Business Consultants, Strategists and
+                Marketing Minds with one goal: to help women of the wellness world STOP undervaluing
+                themselves are their businesses.
+            </p>
+            <p>
+                We help our entrepreneurs think bigger, work smarter and create improved commercial
+                success so they can enjoy the financial freedom to live out their life dreams -
+                whatever those dreams may be.
+            </p>
+            <p>
+                Spark Strategies was founded by Nicole D'Andrea in 2018. As a successful studio
+                owner herself, she uncovered a deep need for professionalization in the wellness
+                world - especially amongst women. So, she leveraged her strategic sixth sense,
+                first-hand experience and bigger vision for the industry to help others build and
+                sustain profitable businesses of their own.
+            </p>
+            <p>
+                To date, we've served hundreds of boutique fitness studios. Our consulting business
+                is our means of empowering others to grow their mindsets AND their bottom lines.
+            </p>
             <p>Ready to thrive? We can't wait to meet you.</p>
         </div>
         <div>
-            <TeamCard name="Nicole D’Andrea" img={Nicole} title="Founder / CEO" bio="Nicole is a Mindbody-Certified Business Consultant, Certified Fix This Next Advisor and Martha Beck Wayfinder Life Coach." size="max-h-[432px]" facebook="" insta="" website="" />
+            <TeamCard
+                name="Nicole D’Andrea"
+                img={Nicole}
+                title="Founder / CEO"
+                bio="Nicole is a Mindbody-Certified Business Consultant, Certified Fix This Next Advisor and Martha Beck Wayfinder Life Coach."
+                size="max-h-[432px]"
+                facebook=""
+                insta=""
+                website=""
+            />
         </div>
     </div>
-    <hr class="hidden my-12 opacity-25 border-sparkHeader lg:block">
+    <hr class="hidden my-12 opacity-25 border-sparkHeader lg:block" />
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <TeamCard name="Jenn Morrison" img={Jenn} title="Executive Business Assistant" bio="Jenn is Nicole's Executive Assistant and the organizer of all things. She keeps Spark clients on-task and moving forward!" size="h-[286px]" facebook="https://www.facebook.com/eliteassistantandbeyond" insta="https://www.instagram.com/eliteassistantandbeyond/" website="https://www.eliteassistantandbeyond.com/" />
-        <TeamCard name="Aida Solomon" img={Aida} title="Branding & Marketing Strategist" bio="Aida is an award-winning multimedia journalist and digital marketing specialist with over a decade of experience helping small businesses stand out online." size="h-[286px]" facebook="https://www.facebook.com/allthingsaida" insta="https://www.instagram.com/aidasolomon/" website="https://www.aidasolomon.com/" />
-        <TeamCard name="Juliana LaRochelle" img={Juliana} title="KPI Analyst" bio="Juliana is an experienced studio owner and business strategist who helps Spark clients gather and organize their metrics - then interpret what they mean!" size="h-[286px]" facebook="https://www.facebook.com/holisticallyyoga" insta="https://www.instagram.com/juliana.larochelle/" website="https://holisticallyyoga.com/" />
+        <TeamCard
+            name="Jenn Morrison"
+            img={Jenn}
+            title="Executive Business Assistant"
+            bio="Jenn is Nicole's Executive Assistant and the organizer of all things. She keeps Spark clients on-task and moving forward!"
+            size="h-[286px]"
+            facebook="https://www.facebook.com/eliteassistantandbeyond"
+            insta="https://www.instagram.com/eliteassistantandbeyond/"
+            website="https://www.eliteassistantandbeyond.com/"
+        />
+        <TeamCard
+            name="Aida Solomon"
+            img={Aida}
+            title="Branding & Marketing Strategist"
+            bio="Aida is an award-winning multimedia journalist and digital marketing specialist with over a decade of experience helping small businesses stand out online."
+            size="h-[286px]"
+            facebook="https://www.facebook.com/allthingsaida"
+            insta="https://www.instagram.com/aidasolomon/"
+            website="https://www.aidasolomon.com/"
+        />
+        <TeamCard
+            name="Juliana LaRochelle"
+            img={Juliana}
+            title="KPI Analyst"
+            bio="Juliana is an experienced studio owner and business strategist who helps Spark clients gather and organize their metrics - then interpret what they mean!"
+            size="h-[286px]"
+            facebook="https://www.facebook.com/holisticallyyoga"
+            insta="https://www.instagram.com/juliana.larochelle/"
+            website="https://holisticallyyoga.com/"
+        />
     </div>
 </section>

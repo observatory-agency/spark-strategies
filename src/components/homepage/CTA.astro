@@ -1,15 +1,21 @@
 ---
-import ActionBox from "../ui/ActionBox.astro";
+import ActionBox from '../ui/ActionBox.astro';
 
-const {ctaLink} = Astro.props;
+const { ctaLink } = Astro.props;
 ---
 
 <section class="flex items-center justify-center bg h-[80vh] sm:h-[60vh] relative">
     <div class="z-50 px-4">
         <ActionBox cta="Schedule my free call!" link={ctaLink} full={true}>
             <div class="flow">
-                <h4 class="text-2xl font-extrabold text-center sm:text-4xl">You are here to change lives -- including your own!</h4>
-                <p class="text-xl leading-normal text-center">Our custom business consulting programs are intensive containers for studio owners who are ready to STOP 'just getting by' and start COMMANDING more from their businesses.</p>
+                <h4 class="text-2xl font-extrabold text-center sm:text-4xl">
+                    You are here to change lives -- including your own!
+                </h4>
+                <p class="text-xl leading-normal text-center">
+                    Our custom business consulting programs are intensive containers for studio
+                    owners who are ready to STOP 'just getting by' and start COMMANDING more from
+                    their businesses.
+                </p>
             </div>
         </ActionBox>
     </div>
