@@ -20,7 +20,7 @@ export default defineConfig({
                     ? env.STORYBLOK_PREVIEW_TOKEN
                     : env.STORYBLOK_PUBLIC_TOKEN,
             components: {
-                Blog: 'storyblok/Blog',
+                BlogPost: 'storyblok/BlogPost',
                 Author: 'storyblok/Author',
                 blogPostList: 'storyblok/BlogPostList',
                 page: 'storyblok/Page',
