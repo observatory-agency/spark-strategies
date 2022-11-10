@@ -6,9 +6,11 @@ import Layout from '../layouts/Layout.astro';
 export async function getStaticPaths() {
     const storyblokApi = useStoryblokApi()
 
-    const { data } = await storyblokApi.get('cdn/stories/', {
+    try {
+        const { data } = await storyblokApi.get('cdn/stories/', {
         version: 'published',
-    }) || {};
+    });
+
     const pages = data.stories.map((story) => {
         return {
             params: {
@@ -20,9 +22,12 @@ export async function getStaticPaths() {
             },
         };
     });
-    console.log(pages);
     return pages;
-}
+    } catch (error) {
+        console.log(error)
+    }
+
+    }
 const { content } = Astro.props;
 ---
 
