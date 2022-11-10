@@ -15,10 +15,7 @@ export default defineConfig({
             serviceEntryPoint: '@astrojs/image/sharp',
         }),
         storyblok({
-            accessToken:
-                import.meta.env.MODE === 'development'
-                    ? env.STORYBLOK_PREVIEW_TOKEN
-                    : env.STORYBLOK_PUBLIC_TOKEN,
+            accessToken: env.STORYBLOK_PUBLIC_TOKEN,
             components: {
                 BlogPost: 'storyblok/BlogPost',
                 Author: 'storyblok/Author',
