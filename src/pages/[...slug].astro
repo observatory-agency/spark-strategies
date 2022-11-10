@@ -13,11 +13,10 @@ export async function getStaticPaths() {
     const pages = data.stories.map((story) => {
         return {
             params: {
-                slug: story.full_slug,
+                slug: story.full_slug === 'blog-home' ? 'blog' : story.full_slug,
             },
             props: {
                 content: story.content,
-                title: story.name
             },
         };
     });
@@ -28,6 +27,4 @@ export async function getStaticPaths() {
 const { content } = Astro.props;
 ---
 
-<Layout title={`${content.title || 'The Profitable Studio Blog'} | Spark Strategies`}>
-    <StoryblokComponent blok={content} />
-</Layout>
+<StoryblokComponent blok={content} />
