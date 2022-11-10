@@ -1,15 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
+import Layout from '../layouts/Layout.astro';
 
 export async function getStaticPaths() {
-    const { client, accessToken } = useStoryblokApi()
-    const { data } = await client.get('cdn/stories/', {
-        params: {
-            version: 'published',
-            token: accessToken,
-        }
+    const storyblokApi = useStoryblokApi()
+    const { data } = await storyblokApi.get('cdn/stories/', {
+        version: 'published',
     });
     const pages = data.stories.map((story) => {
         return {
