@@ -25,7 +25,7 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.29.11.tgz#c5c3950ba6f4cde6131e5c8d51a33d9db77efce9"
   integrity sha512-iNJMknLhALllV69eSsdDK9o+xEPOiOaCKN9Sv5VK33cbOmcRI8ICFaUN8lMIQnVSXWyKFvX1o9w08PivJ24NfQ==
 
-"@astrojs/image@^0.11.2":
+"@astrojs/image@^0.11.1":
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.11.2.tgz#1aad6bab50815af005915b89380a739797292bb5"
   integrity sha512-M4V5b3eO+9vFu9gRPFCtzdzyWWmOEGxDhjY73kLUIxJt2LP8c4NzJtR9unETGOKAlfMFeSJdDQ2L0LTCVH/miw==
@@ -811,7 +811,7 @@ ast-types@0.14.2:
   dependencies:
     tslib "^2.0.1"
 
-astro@^1.6.5:
+astro@^1.6.4:
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/astro/-/astro-1.6.5.tgz#cd3f450dfd0a694b34a8fbb5514dc7371cfaacea"
   integrity sha512-PBjtMJeCRTkvG2ExMpfDUEc7FbwpJ/pxixe7Kt1Z9dfggofGLXnNa5JxzvacuotI1u35wb9nwQ7aI4Uyk5Ellg==
@@ -3628,7 +3628,7 @@ sass-formatter@^0.7.5:
   dependencies:
     suf-log "^2.5.3"
 
-sass@^1.56.1:
+sass@^1.56.0:
   version "1.56.1"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.56.1.tgz#94d3910cd468fd075fa87f5bb17437a0b617d8a7"
   integrity sha512-VpEyKpyBPCxE7qGDtOcdJ6fFbcpOM+Emu7uZLxVrkX8KVU/Dp5UF7WLvzqRuUhB6mqqQt1xffLoG+AndxTZrCQ==
@@ -3943,7 +3943,7 @@ svelte2tsx@^0.5.11:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
 
-svelte@^3.53.0:
+svelte@^3.52.0:
   version "3.53.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.53.0.tgz#e07cdd458f89ec47508ffac20c97a778516026a3"
   integrity sha512-QwR6zwpcdpz5OqybIHlghM+qP2qKbzsKQuU9npgAmnI6zoTDIcjbcseUZA0AJGbotorltpQ0f413euKK4w+Piw==
@@ -3956,7 +3956,7 @@ synckit@^0.7.0:
     "@pkgr/utils" "^2.3.0"
     tslib "^2.4.0"
 
-tailwindcss@^3.2.3:
+tailwindcss@^3.2.2:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.2.3.tgz#c5ee3cb95dae7a80592d43a460d277915c7b2938"
   integrity sha512-Xt9D4PK4zuuQCEB8bwK9JUCKmTgUwyac/6b0/42Vqhgl6YJkep+Wf5wq+5uXYfmrupdAD0YY2NY1hyZp1HjRrg==
