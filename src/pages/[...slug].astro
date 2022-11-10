@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 
     const { data } = await storyblokApi.get('cdn/stories/', {
         version: 'published',
-    });
+    }) || {};
     const pages = data.stories.map((story) => {
         return {
             params: {
