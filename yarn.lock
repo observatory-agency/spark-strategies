@@ -504,7 +504,7 @@
   dependencies:
     tsm "^2.1.4"
 
-"@storyblok/astro@^1.1.0":
+"@storyblok/astro@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@storyblok/astro/-/astro-1.1.1.tgz#a61329c97535ae4480f68f2c75d7f9a24fc18f0c"
   integrity sha512-LyIIQ6l+SELvZMPDtv69mKBPUPsnyhRqhC7D3lFET2sdvmddh63JlUBkGRwnOjUCVzvVuWonwZzdXaWZnAPZ0w==
