@@ -6,7 +6,6 @@ const storyblokApi = useStoryblokApi()
 const { data } = await storyblokApi.get('cdn/stories/', {
     version: 'published',
     content_type: 'BlogPost',
-    resolve_relations: 'Author',
 });
 
 const posts = data.stories.map((story) => {
@@ -17,7 +16,6 @@ const posts = data.stories.map((story) => {
         excerpt: story.content.excerpt,
         tags: story.tag_list,
         slug: story.full_slug,
-        author: story.content.author
     };
 });
 ---
