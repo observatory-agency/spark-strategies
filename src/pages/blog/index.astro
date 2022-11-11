@@ -6,6 +6,7 @@ const storyblokApi = useStoryblokApi()
 const { data } = await storyblokApi.get('cdn/stories/', {
     version: 'published',
     starts_with: 'blog/',
+    resolve_relations: 'author'
 });
 
 const posts = data.stories.map((story) => {
@@ -15,12 +16,24 @@ const posts = data.stories.map((story) => {
         image: story.content.main_image.filename,
         excerpt: story.content.excerpt,
         tags: story.tag_list,
-        slug: story.full_slug,
+        slug: story.slug,
+        readingTime: story.content.reading_time,
+        author: story.content.author
     };
 });
+
+const authors = data.rels.map((author) => {
+    return {
+        name: author.name,
+        slug: author.slug,
+        id: author.uuid,
+    };
+});
+
+console.log(authors);
 ---
 
-<Layout title="blog">
+<Layout title="The Profitable Studio Blog | Spark Strategies">
     <main class="max-w-7xl mx-auto px-4">
         <section class="text-center mt-32">
             <h1 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">The Profitable Studio Blog</h1>
@@ -41,7 +54,7 @@ const posts = data.stories.map((story) => {
                                         ))
                                     }
                                 </p>
-                                <a href={post.slug} class="block mt-2">
+                                <a href={`blog/${post.slug}`} class="block mt-2">
                                     <p class="text-xl font-semibold text-gray-900">{post.title}</p>
                                     <p class="mt-3 text-base text-gray-500 line-clamp-3">{post.excerpt}</p>
                                 </a>
@@ -55,9 +68,12 @@ const posts = data.stories.map((story) => {
                                 <div class="ml-3">
                                     <p class="text-sm font-medium text-gray-900">
                                         <a href="#" class="hover:underline">
-                                            <p>a</p>
+
                                         </a>
                                     </p>
+                                    {post.author === '58f6306f-746d-4bb2-b1e6-30baf9d78280' &&
+                                        <p>Nicole</p>
+                                    }
                                     <div class="flex space-x-1 text-sm text-gray-500">
                                         <time datetime="2020-03-16"> {post.date} </time>
                                         <span aria-hidden="true"> &middot; </span>
