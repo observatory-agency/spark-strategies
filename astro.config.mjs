@@ -22,7 +22,6 @@ export default defineConfig({
             components: {
                 BlogPost: 'storyblok/BlogPost',
                 Author: 'storyblok/Author',
-                blogPostList: 'storyblok/BlogPostList',
                 page: 'storyblok/Page',
             },
         }),
