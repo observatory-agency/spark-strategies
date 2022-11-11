@@ -27,4 +27,6 @@ export async function getStaticPaths() {
 const { content } = Astro.props;
 ---
 
-<StoryblokComponent blok={content} />
+<Layout title={`${content.title || 'The Profitable Studio Blog'} | Spark Strategies`}>
+    <StoryblokComponent blok={content} />
+</Layout>
