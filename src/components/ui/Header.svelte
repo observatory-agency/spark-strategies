@@ -106,7 +106,7 @@
                     href="https://calendly.com/nicole-dandrea/60-min-studio-strategy-session-with-nicole-d-andrea?month=2022-11"
                     target="_blank"
                     rel="noreferrer"
-                    class="items-center hidden px-8 py-2 font-semibold tracking-widest rounded shadow-sm sm:inline-flex text-sparkPeach bg-sparkBlue font-body border-secondaryColor text-secondaryColor hover:bg-secondaryColor hover:text-primaryColor focus:outline-none focus:ring-2 focus:ring-secondaryColorDark focus:ring-offset-2"
+                    class="items-center hidden px-8 py-2 font-semibold tracking-widest rounded shadow-sm sm:inline-flex text-sparkPeach bg-sparkBlue font-body border-secondaryColor text-secondaryColor hover:bg-sparkBlueDark hover:text-primaryColor focus:outline-none focus:ring-2 focus:ring-secondaryColorDark focus:ring-offset-2"
                 >
                     Book now
                 </a>

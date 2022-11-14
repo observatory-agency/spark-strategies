@@ -1,19 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BgPattern from '../components/ui/BgPattern.astro';
 ---
 
 <Layout title="Contact Us | Spark Strategies">
-    <main class="overflow-hidden mt-32">
+    <main class="relative mt-24 overflow-hidden sm:mt-32">
         <!-- Header -->
         <div class="bg-sparkPeach">
-            <div class="py-24 lg:py-32">
-                <div class="relative z-10 mx-auto max-w-7xl pl-4 pr-8 sm:px-6 lg:px-8">
+            <div class="py-12 lg:py-32">
+                <div class="relative z-10 pl-4 pr-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <h1
                         class="text-4xl font-bold tracking-tight text-sparkBody sm:text-5xl lg:text-6xl"
                     >
                         Get in touch
                     </h1>
-                    <p class="mt-6 max-w-3xl text-xl text-warm-gray-500">
+                    <p class="max-w-3xl mt-6 text-xl text-warm-gray-500">
                         Vel nunc non ut montes, viverra tempor. Proin lectus nibh phasellus morbi non
                         morbi. In elementum urna ut volutpat. Sagittis et vel et fermentum amet
                         consequat.
@@ -23,56 +24,23 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Contact section -->
-        <section class="relative bg-sparkPeach" aria-labelledby="contact-heading">
-            <div class="absolute h-1/2 w-full bg-warm-gray-50" aria-hidden="true"></div>
-            <!-- Decorative dot pattern -->
-            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <svg
-                    class="absolute top-0 right-0 z-0 -translate-y-16 translate-x-1/2 transform sm:translate-x-1/4 md:-translate-y-24 lg:-translate-y-72"
-                    width="404"
-                    height="384"
-                    fill="none"
-                    viewBox="0 0 404 384"
-                    aria-hidden="true"
-                >
-                    <defs>
-                        <pattern
-                            id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
-                            x="0"
-                            y="0"
-                            width="20"
-                            height="20"
-                            patternUnits="userSpaceOnUse"
-                        >
-                            <rect
-                                x="0"
-                                y="0"
-                                width="4"
-                                height="4"
-                                class="text-warm-gray-200"
-                                fill="currentColor"
-                            />
-                        </pattern>
-                    </defs>
-                    <rect width="404" height="384" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
-                </svg>
-            </div>
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section class="relative z-50" aria-labelledby="contact-heading">
+            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="relative bg-white shadow-xl">
                     <h2 id="contact-heading" class="sr-only">Contact us</h2>
 
                     <div class="grid grid-cols-1 lg:grid-cols-3">
                         <!-- Contact information -->
                         <div
-                            class="relative overflow-hidden bg-gradient-to-b from-sparkRaspberry to-sparkOrange py-10 px-6 sm:px-10 xl:p-12"
+                            class="relative px-6 py-10 overflow-hidden bg-gradient-to-b from-sparkRaspberry to-sparkOrange sm:px-10 xl:p-12"
                         >
                             <!-- Decorative angle backgrounds -->
                             <div
-                                class="pointer-events-none absolute inset-0 sm:hidden"
+                                class="absolute inset-0 pointer-events-none sm:hidden"
                                 aria-hidden="true"
                             >
                                 <svg
-                                    class="absolute inset-0 h-full w-full"
+                                    class="absolute inset-0 w-full h-full"
                                     width="343"
                                     height="388"
                                     viewBox="0 0 343 388"
@@ -101,11 +69,11 @@ import Layout from '../layouts/Layout.astro';
                                 </svg>
                             </div>
                             <div
-                                class="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-1/2 sm:block lg:hidden"
+                                class="absolute top-0 bottom-0 right-0 hidden w-1/2 pointer-events-none sm:block lg:hidden"
                                 aria-hidden="true"
                             >
                                 <svg
-                                    class="absolute inset-0 h-full w-full"
+                                    class="absolute inset-0 w-full h-full"
                                     width="359"
                                     height="339"
                                     viewBox="0 0 359 339"
@@ -134,11 +102,11 @@ import Layout from '../layouts/Layout.astro';
                                 </svg>
                             </div>
                             <div
-                                class="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-1/2 lg:block"
+                                class="absolute top-0 bottom-0 right-0 hidden w-1/2 pointer-events-none lg:block"
                                 aria-hidden="true"
                             >
                                 <svg
-                                    class="absolute inset-0 h-full w-full"
+                                    class="absolute inset-0 w-full h-full"
                                     width="160"
                                     height="678"
                                     viewBox="0 0 160 678"
@@ -167,7 +135,7 @@ import Layout from '../layouts/Layout.astro';
                                 </svg>
                             </div>
                             <h3 class="text-lg font-medium text-white">Contact information</h3>
-                            <p class="mt-6 max-w-3xl text-base text-sparkPeach">
+                            <p class="max-w-3xl mt-6 text-base text-sparkPeach">
                                 Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa
                                 dictumst amet. Sapien tortor lacus arcu.
                             </p>
@@ -176,7 +144,7 @@ import Layout from '../layouts/Layout.astro';
                                 <dd class="flex text-base text-sparkPeach">
                                     <!-- Heroicon name: outline/phone -->
                                     <svg
-                                        class="h-6 w-6 flex-shrink-0 text-sparkPeach"
+                                        class="flex-shrink-0 w-6 h-6 text-sparkPeach"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
@@ -195,7 +163,7 @@ import Layout from '../layouts/Layout.astro';
                                 <dt><span class="sr-only">Email</span></dt>
                                 <dd class="flex text-base text-sparkPeach">
                                     <svg
-                                        class="h-6 w-6 flex-shrink-0 text-sparkPeach"
+                                        class="flex-shrink-0 w-6 h-6 text-sparkPeach"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
@@ -212,9 +180,9 @@ import Layout from '../layouts/Layout.astro';
                                     <span class="ml-3">info@sparkstrategies.com</span>
                                 </dd>
                             </dl>
-                            <ul role="list" class="mt-8 flex space-x-12">
+                            <ul role="list" class="flex mt-8 space-x-12">
                                 <li>
-                                    <a class="text-sparkPeach hover:text-teal-100" href="#">
+                                    <a class="text-sparkPeach hover:text-sparkBlue" href="#">
                                         <span class="sr-only">Facebook</span>
                                         <svg
                                             class="h-7 w-7"
@@ -231,7 +199,7 @@ import Layout from '../layouts/Layout.astro';
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="text-sparkPeach hover:text-teal-100" href="#">
+                                    <a class="text-sparkPeach hover:text-sparkBlue" href="#">
                                         <span class="sr-only">GitHub</span>
                                         <svg
                                             class="h-7 w-7"
@@ -248,7 +216,7 @@ import Layout from '../layouts/Layout.astro';
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="text-sparkPeach hover:text-teal-100" href="#">
+                                    <a class="text-sparkPeach hover:text-sparkBlue" href="#">
                                         <span class="sr-only">Twitter</span>
                                         <svg
                                             class="h-7 w-7"
@@ -266,12 +234,12 @@ import Layout from '../layouts/Layout.astro';
                         </div>
 
                         <!-- Contact form -->
-                        <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+                        <div class="px-6 py-10 sm:px-10 lg:col-span-2 xl:p-12">
                             <h3 class="text-lg font-medium text-sparkBody">Send us a message</h3>
                             <form
                                 action="https://formspree.io/f/xlevavna"
                                 method="POST"
-                                class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                                class="grid grid-cols-1 mt-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
                             >
                                 <div>
                                     <label
@@ -285,7 +253,7 @@ import Layout from '../layouts/Layout.astro';
                                             name="first-name"
                                             id="first-name"
                                             autocomplete="given-name"
-                                            class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-sparkBody shadow-sm focus:border-sparkBlue focus:ring-sparkBlue"
+                                            class="block w-full px-4 py-3 rounded-md shadow-sm border-warm-gray-300 text-sparkBody focus:border-sparkBlue focus:ring-sparkBlue"
                                             required
                                         />
                                     </div>
@@ -302,7 +270,7 @@ import Layout from '../layouts/Layout.astro';
                                             name="last-name"
                                             id="last-name"
                                             autocomplete="family-name"
-                                            class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-sparkBody shadow-sm focus:border-sparkBlue focus:ring-sparkBlue"
+                                            class="block w-full px-4 py-3 rounded-md shadow-sm border-warm-gray-300 text-sparkBody focus:border-sparkBlue focus:ring-sparkBlue"
                                             required
                                         />
                                     </div>
@@ -319,7 +287,7 @@ import Layout from '../layouts/Layout.astro';
                                             name="email"
                                             type="email"
                                             autocomplete="email"
-                                            class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-sparkBody shadow-sm focus:border-sparkBlue focus:ring-sparkBlue"
+                                            class="block w-full px-4 py-3 rounded-md shadow-sm border-warm-gray-300 text-sparkBody focus:border-sparkBlue focus:ring-sparkBlue"
                                             required
                                         />
                                     </div>
@@ -341,7 +309,7 @@ import Layout from '../layouts/Layout.astro';
                                             name="phone"
                                             id="phone"
                                             autocomplete="tel"
-                                            class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-sparkBody shadow-sm focus:border-sparkBlue focus:ring-sparkBlue"
+                                            class="block w-full px-4 py-3 rounded-md shadow-sm border-warm-gray-300 text-sparkBody focus:border-sparkBlue focus:ring-sparkBlue"
                                             aria-describedby="phone-optional"
                                         />
                                     </div>
@@ -357,7 +325,7 @@ import Layout from '../layouts/Layout.astro';
                                             type="text"
                                             name="subject"
                                             id="subject"
-                                            class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-sparkBody shadow-sm focus:border-sparkBlue focus:ring-sparkBlue"
+                                            class="block w-full px-4 py-3 rounded-md shadow-sm border-warm-gray-300 text-sparkBody focus:border-sparkBlue focus:ring-sparkBlue"
                                             required
                                         />
                                     </div>
@@ -378,7 +346,7 @@ import Layout from '../layouts/Layout.astro';
                                             id="message"
                                             name="message"
                                             rows="4"
-                                            class="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-sparkBody shadow-sm focus:border-sparkBlue focus:ring-sparkBlue"
+                                            class="block w-full px-4 py-3 rounded-md shadow-sm border-warm-gray-300 text-sparkBody focus:border-sparkBlue focus:ring-sparkBlue"
                                             aria-describedby="message-max"
                                             required
                                         ></textarea>
@@ -387,7 +355,7 @@ import Layout from '../layouts/Layout.astro';
                                 <div class="sm:col-span-2 sm:flex sm:justify-end">
                                     <button
                                         type="submit"
-                                        class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-sparkBlue px-6 py-3 text-base font-medium text-sparkPeach shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto"
+                                        class="inline-flex items-center justify-center w-full px-6 py-3 mt-2 text-base font-medium border border-transparent rounded-md shadow-sm bg-sparkBlue text-sparkPeach hover:bg-sparkBlueDark focus:outline-none focus:ring-2 focus:ring-sparkHeader focus:ring-offset-2 sm:w-auto"
                                     >
                                         Submit
                                     </button>
@@ -399,17 +367,19 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
+        <div class="h-[756px] bg-sparkOrange max-w-lg w-2/5 rounded-tl-3xl rounded-bl-3xl absolute left-full hidden -translate-x-3/4 translate-y-8 top-0 transform lg:block"></div>
+
         <!-- Contact grid -->
-        <section aria-labelledby="offices-heading">
-            <div class="mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <section aria-labelledby="offices-heading z-50 relative">
+            <div class="px-4 py-24 mx-auto max-w-7xl sm:py-32 sm:px-6 lg:px-8">
                 <h2 id="offices-heading" class="text-3xl font-bold tracking-tight text-sparkBody">
                     Our offices
                 </h2>
-                <p class="mt-6 max-w-3xl text-lg text-warm-gray-500">
+                <p class="max-w-3xl mt-6 text-lg text-warm-gray-500">
                     Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non.
                     Cras aliquet purus dui laoreet diam sed lacus, fames.
                 </p>
-                <div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="grid grid-cols-1 gap-10 mt-10 sm:grid-cols-2 lg:grid-cols-4">
                     <div>
                         <h3 class="text-lg font-medium text-sparkBody">Montclair</h3>
                         <p class="mt-2 text-base text-warm-gray-500">

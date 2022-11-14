@@ -6,6 +6,7 @@ module.exports = {
             colors: {
                 sparkPeach: '#FFF5EC',
                 sparkBlue: '#005370',
+                sparkBlueDark: '#003C52',
                 sparkRaspberry: '#E84853',
                 sparkPink: '#D881AB',
                 sparkOrange: '#E69649',
