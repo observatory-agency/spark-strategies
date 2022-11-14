@@ -5,7 +5,7 @@ const { blok } = Astro.props;
 const content = renderRichText(blok.content)
 ---
 
-<main class="mt-32 max-w-prose mx-auto">
+<main class="mx-auto mt-32 max-w-prose">
     <article {...storyblokEditable(blok)} class="prose prose-lg">
         <h1>{blok.title}</h1>
         <p>{blok.excerpt}</p>
