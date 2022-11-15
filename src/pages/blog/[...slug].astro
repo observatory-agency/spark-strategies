@@ -8,7 +8,18 @@ export async function getStaticPaths() {
     const { data } = await storyblokApi.get('cdn/stories/', {
         version: 'published',
         starts_with: 'blog/',
+        resolve_relations: 'author'
     });
+
+    const authors = data.rels.map((author) => {
+        return {
+            name: author.name,
+            slug: author.slug,
+            id: author.uuid,
+            image: author.content.avatar.filename
+        };
+    });
+
     const pages = data.stories.map((story) => {
         return {
             params: {
@@ -16,13 +27,13 @@ export async function getStaticPaths() {
             },
             props: {
                 content: story.content,
-                title: story.name
+                authors: story.authors
             },
         };
     });
-    console.log(pages);
     return pages;
 }
+
 const { content } = Astro.props;
 ---
 
