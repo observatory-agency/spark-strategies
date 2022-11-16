@@ -5,7 +5,7 @@ import CldImage from '../../components/ui/CldImage.astro';
 
 <section class="py-4 mb-[26rem] sm:mb-0 sm:overflow-hidden sm:py-20">
     <div class="relative flex justify-end mx-auto max-w-7xl">
-        <div class="absolute left-0 top-56 sm:top-12">
+        <div class="absolute left-0 top-56 sm:top-16">
             <ActionBox
                 cta="Book now"
                 link="https://calendly.com/nicole-dandrea/60-min-studio-strategy-session-with-nicole-d-andrea"
@@ -29,18 +29,14 @@ import CldImage from '../../components/ui/CldImage.astro';
                 alt="Yoga class"
                 class="rounded-tl-lg rounded-tr-lg sm:hidden"
             />
-            <video muted autoplay loop class="max-w-4xl rounded-[32px] hidden sm:block">
+            <video muted autoplay loop class="max-w-4xl h-[600px] object-cover object-center rounded-[32px] hidden sm:block">
                 <source
                     src="https://res.cloudinary.com/observatory-agency/video/upload/v1667337891/clients/spark-strategies/hero-video.mp4"
                     type="video/mp4"
                 />
             </video>
         </div>
-        <!-- <div
-            class="h-[664px] bg-sparkRaspberry -z-10 max-w-lg w-2/5 rounded-tl-3xl rounded-bl-3xl absolute left-full hidden -translate-x-3/4 -translate-y-20 transform lg:block"
-        >
-        </div> -->
-        <div class="relative px-6 py-10 overflow-hidden bg-gradient-to-b from-sparkRaspberry to-sparkOrange sm:px-10 xl:p-12">
+        <div class="absolute h-[664px] px-6 py-10 w-2/5 -z-10 rounded-tl-3xl rounded-bl-3xl overflow-hidden left-full hidden bg-gradient-to-b from-sparkRaspberry to-sparkOrange -translate-x-3/4 -translate-y-8 sm:px-10 xl:p-12 lg:block">
             <!-- Decorative angle backgrounds -->
             <div class="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
               <svg class="absolute inset-0 w-full h-full" width="343" height="388" viewBox="0 0 343 388" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
@@ -75,8 +71,7 @@ import CldImage from '../../components/ui/CldImage.astro';
                 </defs>
               </svg>
             </div>
-          </div>
-
+        </div>
     </div>
 </section>
 

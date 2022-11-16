@@ -11,15 +11,21 @@ h6 {
     scroll-behavior: smooth;
 }
 
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
 .flow {
-    --flow-space: 1.5rem;
+    --flow-space: 1rem;
 }
 
 .flow > * + * {
     margin-top: var(--flow-space);
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.5;
+@media screen and (min-width: 1024px) {
+    .flow {
+        --flow-space: 1.5rem;
+    }
 }

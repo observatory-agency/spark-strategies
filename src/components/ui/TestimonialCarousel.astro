@@ -84,7 +84,7 @@ let testimonies = [
         tabindex="0"
         role="region"
         aria-labelledby="carousel-label"
-        class="flex flex-col space-x-6"
+        class="flex flex-col lg:space-x-6"
     >
         <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
 
@@ -101,42 +101,34 @@ let testimonies = [
                 testimonies.map((testimony) => (
                     <li
                         x-bind="disableNextAndPreviousButtons"
-                        class="grid w-full gap-6 p-2 lg:grid-cols-12 shrink-0 snap-start"
+                        class="grid w-full p-2 lg:gap-16 lg:grid-cols-12 shrink-0 snap-start"
                         role="option"
                     >
-                        <div class="col-span-7 space-y-4">
+                        <div class="space-y-4 lg:col-span-7">
                             <h4 class="text-xl italic font-bold text-sparkHeader">
                                 {testimony.header}
                             </h4>
-                            <p class="text-2xl font-normal leading-normal text-sparkBody">
+                            <p class="text-lg font-normal leading-normal sm:text-2xl text-sparkBody">
                                 {testimony.quote}
                             </p>
                             <div>
-                                <CldImage
-                                    width="64"
-                                    height="64"
-                                    src={`clients/spark-strategies/${testimony.img}.jpg`}
-                                    alt={testimony.name}
-                                    class="object-cover rounded-full shadow-sm sm:hidden"
-                                />
-                                <span>{testimony.name}</span>
-                                <span>{testimony.company}</span>
+                                <span>{testimony.name} | {testimony.company}</span>
                             </div>
                         </div>
-                        <div class="hidden col-span-4 col-start-8 lg:block">
+                        <div class="hidden col-span-4 col-start-8 py-1 lg:block">
                             <CldImage
-                                width="832"
-                                height="392"
+                                width="788"
+                                height="762"
                                 src={`clients/spark-strategies/${testimony.img}.jpg`}
                                 alt={testimony.name}
-                                class="object-cover lg:h-full lg:shadow-xl rounded-2xl"
+                                class="object-cover lg:shadow-md max-h-[428px] rounded-2xl"
                             />
                         </div>
                     </li>
                 ))
             }
         </ul>
-        <div class="flex gap-4">
+        <div class="flex gap-4 max-lg:p-2">
             <button
                 x-on:click="prev"
                 class="inline-block rounded-full bg-sparkRaspberry"
