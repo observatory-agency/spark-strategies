@@ -37,8 +37,8 @@ let days = [
 
 <section id="profitable-studio-masterclass" class="relative py-12 bg sm:py-24 scroll-mt-16">
     <div class="px-4 sm:text-center flow">
-        <h2 class="text-4xl font-extrabold text-sparkHeader">
-            The Five Day Profitable Studio <span class="font-display">Masterclass</span>
+        <h2 class="text-5xl font-extrabold text-sparkHeader">
+            The Five Day Profitable Studio <span class="relative font-display brush">Masterclass</span>
         </h2>
         <p class="mx-auto max-w-prose">Ready to get your studio out of survival mode without breaking the bank? Inside the 5 Day Profitable Studio Masterclass you'll find:</p>
     </div>
@@ -90,6 +90,23 @@ let days = [
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    .brush::before {
+        @media screen and (min-width: 1280px) {
+            content: " ";
+            position: absolute;
+            bottom: 10px;
+            right: -5px;
+            width: 275px;
+            height: 35px;
+            opacity: 1;
+            z-index: -1;
+            background-image: url(/patterns/brush.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
 
     aside {

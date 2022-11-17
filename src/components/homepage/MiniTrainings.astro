@@ -3,9 +3,9 @@
         <div class="max-w-screen-xl px-4 mx-auto text-center sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto space-y-2 lg:max-w-none">
                 <h2
-                    class="text-2xl font-bold text-sparkHeader sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none"
+                    class="text-2xl font-bold text-sparkHeader sm:text-5xl sm:leading-10 lg:leading-none"
                 >
-                    <span class="text-2xl sm:text-6xl sm:font-display">Free</span>
+                    <span class="font-display sm:text-[54px] brush relative">Free</span>
                     Mini Trainings
                 </h2>
             </div>
@@ -244,3 +244,22 @@
         </div>
     </div>
 </section>
+
+<style lang="scss">
+    .brush::before {
+        @media screen and (min-width: 1280px) {
+            content: " ";
+            position: absolute;
+            bottom: 18px;
+            right: -9px;
+            width: 133px;
+            height: 18px;
+            opacity: 1;
+            z-index: -1;
+            background-image: url(/patterns/brush.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+</style>

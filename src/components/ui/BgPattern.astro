@@ -1,7 +1,8 @@
 ---
+const { height, yOffset } = Astro.props;
 ---
 
-<div class="absolute h-[664px] px-6 py-10 w-2/5 -z-10 rounded-tl-3xl rounded-bl-3xl overflow-hidden left-full hidden bg-gradient-to-b from-sparkRaspberry to-sparkOrange -translate-x-3/4 -translate-y-20 sm:px-10 xl:p-12 lg:block">
+<div style={`height: ${height}px;`} class={`absolute px-6 py-10 w-2/5 -z-10 rounded-tl-3xl rounded-bl-3xl overflow-hidden left-full hidden bg-gradient-to-b from-sparkRaspberry to-sparkOrange -translate-x-3/4 ${yOffset} sm:px-10 xl:p-12 lg:block`}>
     <!-- Decorative angle backgrounds -->
     <div class="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
       <svg class="absolute inset-0 w-full h-full" width="343" height="388" viewBox="0 0 343 388" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
