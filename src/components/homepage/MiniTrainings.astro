@@ -5,7 +5,7 @@
                 <h2
                     class="text-2xl font-bold text-sparkHeader sm:text-5xl sm:leading-10 lg:leading-none"
                 >
-                    <span class="font-display sm:text-[54px] brush relative">Free</span>
+                    <span class="font-display text-3xl sm:text-[54px] brush relative">Free</span>
                     Mini Trainings
                 </h2>
             </div>
@@ -28,7 +28,7 @@
                                 </h3>
                             </div>
                             <h3 class="mt-4 text-2xl font-medium leading-none sm:text-4xl">Sales School</h3>
-                            <p class="mt-5 text-base leading-7 text-sparkBody">
+                            <p class="mt-5 text-base font-medium leading-7 text-sparkBody">
                                 ICKED-OUT BY THE WORD ‘SALES’? This training is for you if...
                             </p>
                         </div>
@@ -131,7 +131,7 @@
                             <h3 class="mt-4 text-2xl font-medium leading-none sm:text-4xl">
                                 The Retention Rulebook
                             </h3>
-                            <p class="mt-5 text-base leading-7 text-sparkBody">
+                            <p class="mt-5 text-base font-medium leading-7 text-sparkBody">
                                 Retention is the SINGLE most important metric to know and love
                                 within your studio business. It's the key to:
                             </p>
@@ -247,19 +247,23 @@
 
 <style lang="scss">
     .brush::before {
-        @media screen and (min-width: 1280px) {
-            content: " ";
+        content: " ";
             position: absolute;
-            bottom: 18px;
-            right: -9px;
-            width: 133px;
-            height: 18px;
+            bottom: 6px;
+            right: -6px;
+            width: 74px;
+            height: 16px;
             opacity: 1;
             z-index: -1;
             background-image: url(/patterns/brush.svg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-        }
+            @media screen and (min-width: 1280px) {
+                bottom: 18px;
+                right: -9px;
+                width: 133px;
+                height: 18px;
+            }
     }
 </style>
