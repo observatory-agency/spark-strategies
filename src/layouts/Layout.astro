@@ -5,12 +5,6 @@ import Contact from '../components/ui/Contact.astro';
 
 import '../styles/fonts.css';
 import '../styles/global.css';
-
-export interface Props {
-    title: string;
-}
-
-const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -21,7 +15,25 @@ const { title } = Astro.props;
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <meta name="robots" content="noindex, nofollow" />
-        <title>{title}</title>
+
+        <!-- Primary Meta Tags -->
+        <title>Growth Solutions for Boutique Fitness Businesses | Spark Strategies</title>
+        <meta name="title" content="Growth Solutions for Boutique Fitness Businesses | Spark Strategies">
+        <meta name="description" content="Your team of Savvy Strategists, Marketing Minds & Industry Changemakers committed to helping your business thrive. ">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://sparkstrategies.co/">
+        <meta property="og:title" content="Growth Solutions for Boutique Fitness Businesses | Spark Strategies">
+        <meta property="og:description" content="Your team of Savvy Strategists, Marketing Minds & Industry Changemakers committed to helping your business thrive. ">
+        <meta property="og:image" content="https://sparkstrategies.co/spark.jpg">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://sparkstrategies.co/">
+        <meta property="twitter:title" content="Growth Solutions for Boutique Fitness Businesses | Spark Strategies">
+        <meta property="twitter:description" content="Your team of Savvy Strategists, Marketing Minds & Industry Changemakers committed to helping your business thrive. ">
+        <meta property="twitter:image" content="https://sparkstrategies.co/spark.jpg">
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
