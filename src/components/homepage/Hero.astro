@@ -7,13 +7,11 @@ import BgPattern from '../ui/BgPattern.astro';
 <section class="py-4 mb-[28rem] sm:mb-0 sm:overflow-hidden sm:py-20">
     <div class="relative flex justify-end mx-auto max-w-7xl">
         <div class="absolute left-0 top-56 sm:top-16">
-            <ActionBox
-                cta="Book now"
-                link="/book-a-free-60-minute-studio-strategy-session"
-            >
+            <ActionBox cta="Book now" link="/book-a-free-60-minute-studio-strategy-session">
                 <h1 class="text-3xl lg:text-[64px] leading-none font-extrabold">
-                    Is your boutique fitness studio ready <br class="sm:hidden"> to <span
-                        class="relative z-10 font-display brush">grow?</span>
+                    Is your boutique fitness studio ready <br class="sm:hidden" /> to <span
+                        class="relative z-10 font-display brush">grow?</span
+                    >
                 </h1>
                 <p class="mt-4 text-xl leading-normal">
                     We’re your team of Savvy Strategists, Marketing Minds & Industry Changemakers
@@ -30,7 +28,12 @@ import BgPattern from '../ui/BgPattern.astro';
                 alt="Yoga class"
                 class="rounded-tl-lg rounded-tr-lg sm:hidden"
             />
-            <video muted autoplay loop class="max-w-4xl h-[600px] object-cover object-center rounded-[32px] hidden sm:block">
+            <video
+                muted
+                autoplay
+                loop
+                class="max-w-4xl h-[600px] object-cover object-center rounded-[32px] hidden sm:block"
+            >
                 <source
                     src="https://res.cloudinary.com/observatory-agency/video/upload/v1667337891/clients/spark-strategies/hero-video.mp4"
                     type="video/mp4"
@@ -43,23 +46,23 @@ import BgPattern from '../ui/BgPattern.astro';
 
 <style lang="scss">
     .brush::before {
-        content: " ";
-            position: absolute;
-            bottom: 10px;
+        content: ' ';
+        position: absolute;
+        bottom: 10px;
+        right: -5px;
+        width: 100px;
+        height: 12px;
+        opacity: 1;
+        z-index: -1;
+        background-image: url(/patterns/brush.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @media screen and (min-width: 1280px) {
+            bottom: 18px;
             right: -5px;
-            width: 100px;
-            height: 12px;
-            opacity: 1;
-            z-index: -1;
-            background-image: url(/patterns/brush.svg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            @media screen and (min-width: 1280px) {
-                bottom: 18px;
-                right: -5px;
-                width: 205px;
-                height: 25px;
-            }
+            width: 205px;
+            height: 25px;
+        }
     }
 </style>

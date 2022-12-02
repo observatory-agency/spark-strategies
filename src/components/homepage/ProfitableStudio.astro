@@ -38,9 +38,14 @@ let days = [
 <section id="profitable-studio-masterclass" class="relative py-12 bg sm:py-24 scroll-mt-16">
     <div class="px-4 sm:text-center flow">
         <h2 class="text-3xl font-extrabold sm:text-5xl text-sparkHeader">
-            The Five Day Profitable Studio <span class="relative font-display brush">Masterclass</span>
+            The Five Day Profitable Studio <span class="relative font-display brush"
+                >Masterclass</span
+            >
         </h2>
-        <p class="mx-auto max-w-prose">Ready to get your studio out of survival mode without breaking the bank? Inside the 5 Day Profitable Studio Masterclass you'll find:</p>
+        <p class="mx-auto max-w-prose">
+            Ready to get your studio out of survival mode without breaking the bank? Inside the 5
+            Day Profitable Studio Masterclass you'll find:
+        </p>
     </div>
     <div class="max-w-6xl px-4 mx-auto mt-6 sm:mt-12">
         <div class="flex flex-col gap-4 lg:gap-36">
@@ -93,25 +98,25 @@ let days = [
     }
 
     .brush::before {
-        content: " ";
-            position: absolute;
-            bottom: 6px;
+        content: ' ';
+        position: absolute;
+        bottom: 6px;
+        right: -5px;
+        width: 175px;
+        height: 19px;
+        opacity: 1;
+        z-index: -1;
+        background-image: url(/patterns/brush.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @media screen and (min-width: 1280px) {
+            content: ' ';
+            bottom: 10px;
             right: -5px;
-            width: 175px;
-            height: 19px;
-            opacity: 1;
-            z-index: -1;
-            background-image: url(/patterns/brush.svg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            @media screen and (min-width: 1280px) {
-                content: " ";
-                bottom: 10px;
-                right: -5px;
-                width: 275px;
-                height: 35px;
-            }
+            width: 275px;
+            height: 35px;
+        }
     }
 
     aside {
