@@ -10,7 +10,7 @@
         },
         { name: 'About Us', anchor: '/#about' },
         { name: 'Free Mini Trainings', anchor: '/#trainings' },
-        // { name: 'Media', anchor: '/media' },
+        { name: 'Media', anchor: '/media-library' },
         { name: 'Blog', anchor: '/blog' },
     ];
 
