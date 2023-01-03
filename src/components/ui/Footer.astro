@@ -2,14 +2,14 @@
 import Button from './Button.astro';
 
 let navItems = [
-    { name: 'Services', anchor: '#services' },
+    { name: 'Services', anchor: '/#services' },
     {
         name: 'Profitable Studio Masterclass',
-        anchor: '#profitable-studio-masterclass',
+        anchor: '/#profitable-studio-masterclass',
     },
-    { name: 'About Us', anchor: '#about' },
-    { name: 'Free Mini Trainings', anchor: '#trainings' },
-    // { name: 'Media', anchor: '/media' },
+    { name: 'About Us', anchor: '/#about' },
+    { name: 'Free Mini Trainings', anchor: '/#trainings' },
+    { name: 'Media', anchor: '/media-library' },
     { name: 'Blog', anchor: '/blog' },
 ];
 ---
@@ -37,7 +37,11 @@ let navItems = [
                     The latest news, articles, and resources, sent to your inbox weekly.
                 </p>
             </div>
-            <form action="https://formspree.io/f/maykvdvo" method="POST" class="flex flex-col mt-4 sm:space-x-4 sm:flex-row sm:max-w-md lg:mt-4">
+            <form
+                action="https://formspree.io/f/maykvdvo"
+                method="POST"
+                class="flex flex-col mt-4 sm:space-x-4 sm:flex-row sm:max-w-md lg:mt-4"
+            >
                 <label for="email-address" class="sr-only">Email address</label>
                 <input
                     type="email"
@@ -55,7 +59,10 @@ let navItems = [
             class="flex flex-col items-center pt-6 mt-8 border-t border-stone-200 md:flex-row md:justify-between"
         >
             <div class="flex space-x-6 md:order-2">
-                <a href="https://www.facebook.com/sparkgrowthstrategy" class="text-stone-400 hover:text-stone-500">
+                <a
+                    href="https://www.facebook.com/sparkgrowthstrategy"
+                    class="text-stone-400 hover:text-stone-500"
+                >
                     <span class="sr-only">Facebook</span>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
@@ -65,7 +72,10 @@ let navItems = [
                     </svg>
                 </a>
 
-                <a href="https://www.instagram.com/sparkstrategies_/" class="text-stone-400 hover:text-stone-500">
+                <a
+                    href="https://www.instagram.com/sparkstrategies_/"
+                    class="text-stone-400 hover:text-stone-500"
+                >
                     <span class="sr-only">Instagram</span>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
