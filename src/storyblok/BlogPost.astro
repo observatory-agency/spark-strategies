@@ -2,7 +2,7 @@
 import { storyblokEditable, renderRichText } from '@storyblok/astro';
 
 const { blok } = Astro.props;
-const content = renderRichText(blok.content)
+const content = renderRichText(blok.content);
 ---
 
 <main class="px-4 pb-20 mx-auto pt-36 max-w-prose">
@@ -10,11 +10,24 @@ const content = renderRichText(blok.content)
         <h1>{blok.title}</h1>
         <div>
             <div class="flex flex-col">
-                <span>By {blok.author === '58f6306f-746d-4bb2-b1e6-30baf9d78280'
-                    ? 'Nicole D\'Andrea'
-                    : 'Juliana Larochelle'
-                }</span>
-                <span class="text-sm">Posted on: {new Date(blok.date).toLocaleDateString('en-US')}</span>
+                <span
+                    >By
+                    {
+                        (() => {
+                            switch (blok.author) {
+                                case '40e7c85d-dbd6-4292-9430-800d0b448b58':
+                                    return 'Juliana Larochelle';
+                                case '8db3389b-9595-45d7-8719-bb9ea1869f99':
+                                    return 'Aida Solomon';
+                                default:
+                                    return "Nicole D'Andrea";
+                            }
+                        })()
+                    }
+                </span>
+                <span class="text-sm"
+                    >Posted on: {new Date(blok.date).toLocaleDateString('en-US')}</span
+                >
                 <span class="text-sm">{blok.reading_time} read</span>
             </div>
         </div>
