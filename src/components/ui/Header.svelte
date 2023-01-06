@@ -4,12 +4,11 @@
 
     let navItems = [
         { name: 'Services', anchor: '/#services' },
-        {
-            name: 'Profitable Studio Masterclass',
-            anchor: '/#profitable-studio-masterclass',
-        },
         { name: 'About Us', anchor: '/#about' },
         { name: 'Free Mini Trainings', anchor: '/#trainings' },
+        { name: 'Resources', anchor: 'https://resources.sparkstrategies.co/' },
+        { name: 'Media Library', anchor: '/media-library' },
+        { name: 'Blog', anchor: '/blog' },
     ];
     let moreItems = [
         { name: 'Resources', anchor: 'https://resources.sparkstrategies.co/' },
@@ -104,7 +103,7 @@
                         <a href={navItem.anchor}>{navItem.name}</a>
                     {/each}
                 </div>
-                <button
+                <!-- <button
                     type="button"
                     class="items-center hidden rounded-md lg:inline-flex group hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-sparkBlue focus:ring-offset-2"
                     aria-expanded="false"
@@ -224,7 +223,7 @@
                             </div>
                         </div>
                     </div>
-                {/if}
+                {/if} -->
             </div>
             <div class="flex items-center gap-4 sm:gap-8">
                 <a
