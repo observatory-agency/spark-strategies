@@ -4,11 +4,11 @@ import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 
 export async function getStaticPaths() {
-    const storyblokApi = useStoryblokApi()
+    const storyblokApi = useStoryblokApi();
     const { data } = await storyblokApi.get('cdn/stories/', {
         version: 'published',
         starts_with: 'blog/',
-        resolve_relations: 'author'
+        resolve_relations: 'author',
     });
 
     const authors = data.rels.map((author) => {
@@ -16,18 +16,18 @@ export async function getStaticPaths() {
             name: author.name,
             slug: author.slug,
             id: author.uuid,
-            image: author.content.avatar.filename
+            image: author.content.avatar.filename,
         };
     });
 
     const pages = data.stories.map((story) => {
         return {
             params: {
-                slug: story.slug
+                slug: story.slug,
             },
             props: {
                 content: story.content,
-                authors: story.authors
+                authors: story.authors,
             },
         };
     });

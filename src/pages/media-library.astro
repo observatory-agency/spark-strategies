@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { useStoryblokApi } from '@storyblok/astro';
+
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get('cdn/stories/media-library', {
+    version: 'published',
+});
+
+let { content } = data.story;
+let media = content.body;
+
+// filter out the media items that are of the category Speaking
+let mediaLibrary = media.filter((item) => item.Category !== 'Speaking');
+let speaking = media.filter((item) => item.Category === 'Speaking');
+---
+
+<Layout>
+    <main class="px-4 mx-auto mt-28 sm:mt-32 max-w-7xl">
+        <section>
+            <h1 class="text-3xl font-extrabold text-center text-gray-900 font-display sm:text-4xl">
+                Media Library
+            </h1>
+            <div class="grid gap-8 mx-auto mt-8 xl:grid-cols-3 max-w-7xl">
+                {
+                    mediaLibrary.map((item) => {
+                        return (
+                            <a href={item.Link.url} target="_blank" rel="noreferrer">
+                                <div class="transition duration-300 ease-in-out transform rounded-lg hover:shadow-xl hover:scale-[1.01] hover:translate-x-1.5 hover:translate-y-1.5 h-full">
+                                    <div class="flex flex-col justify-between h-full overflow-hidden bg-white divide-y divide-gray-200 rounded-lg shadow">
+                                        <div class="flex-1">
+                                            <img
+                                                src={item.Image.filename}
+                                                alt={item.Name}
+                                                class="object-cover object-center w-full h-56"
+                                            />
+                                        </div>
+                                        <div class="flex-auto px-4 py-5 space-y-4 sm:p-6">
+                                            <span class="inline-flex items-center rounded-full bg-sparkHeader px-3 py-0.5 text-sm font-medium text-white">
+                                                {item.Category}
+                                            </span>
+                                            <div>
+                                                <h3 class="text-lg font-medium leading-6 2xl:text-xl text-sparkHeader">
+                                                    {item.Name}
+                                                </h3>
+                                                <p class="max-w-2xl mt-2 text-sparkBody/80 line-clamp-4">
+                                                    {item.Description.content[0].content[0].text}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        );
+                    })
+                }
+            </div>
+        </section>
+        <section>
+            <div class="py-24 sm:py-32">
+                <div class="px-6 mx-auto max-w-7xl lg:px-8">
+                    <div class="sm:text-center">
+                        <h2 class="text-lg font-semibold leading-8 text-sparkBlue">
+                            Business Development Presentations
+                        </h2>
+                        <p
+                            class="mt-2 text-3xl max-w-[767px] mx-auto font-bold tracking-tight text-gray-900"
+                        >
+                            Spark Signature Talks
+                        </p>
+                        <p class="max-w-2xl mx-auto mt-6 text-lg leading-8 text-gray-600">
+                            Invite Spark Strategies Founder Nicole D’Andrea to speak at your live or
+                            virtual event. For business education or speaking inquiries, please
+                            contact info@sparkstrategies.co
+                        </p>
+                    </div>
+
+                    <div class="grid gap-6 mx-auto mt-8 xl:grid-cols-3 max-w-7xl">
+                        {
+                            speaking.map((item) => {
+                                return (
+                                    <a href={item.Link.url} target="_blank" rel="noreferrer">
+                                        <div class="transition duration-300 ease-in-out transform rounded-lg hover:shadow-xl hover:scale-[1.01] hover:translate-x-1.5 hover:translate-y-1.5 h-full">
+                                            <div class="flex flex-col justify-between h-full overflow-hidden bg-white divide-y divide-gray-200 rounded-lg shadow">
+                                                <div class="flex-1">
+                                                    <img
+                                                        src={item.Image.filename}
+                                                        alt={item.Name}
+                                                        class="object-cover object-center w-full h-56"
+                                                    />
+                                                </div>
+                                                <div class="flex-auto px-4 py-5 space-y-4 sm:p-6">
+                                                    <span class="inline-flex items-center rounded-full bg-sparkHeader px-3 py-0.5 text-sm font-medium text-white">
+                                                        {item.Category}
+                                                    </span>
+                                                    <div>
+                                                        <h3 class="text-lg font-medium leading-6 2xl:text-xl text-sparkHeader">
+                                                            {item.Name}
+                                                        </h3>
+                                                        <p class="max-w-2xl mt-2 text-sparkBody/80 line-clamp-4">
+                                                            {
+                                                                item.Description.content[0]
+                                                                    .content[0].text
+                                                            }
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                );
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
