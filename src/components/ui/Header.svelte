@@ -6,12 +6,12 @@
         { name: 'Services', anchor: '/#services' },
         { name: 'About Us', anchor: '/#about' },
         { name: 'Free Mini Trainings', anchor: '/#trainings' },
-        { name: 'Resources', anchor: 'https://resources.sparkstrategies.co/' },
+        // { name: 'Resources', anchor: 'https://resources.sparkstrategies.co/' },
         { name: 'Media Library', anchor: '/media-library' },
         { name: 'Blog', anchor: '/blog' },
     ];
     let moreItems = [
-        { name: 'Resources', anchor: 'https://resources.sparkstrategies.co/' },
+        // { name: 'Resources', anchor: 'https://resources.sparkstrategies.co/' },
         { name: 'Media Library', anchor: '/media-library' },
         { name: 'Blog', anchor: '/blog' },
     ];
@@ -254,15 +254,6 @@
                 >
                     <div class="flex flex-col items-start space-y-4">
                         {#each navItems as navItem}
-                            <a
-                                on:click|once={toggleNav}
-                                href={navItem.anchor}
-                                class="text-lg font-medium text-primaryColor font-body"
-                            >
-                                {navItem.name}
-                            </a>
-                        {/each}
-                        {#each moreItems as navItem}
                             <a
                                 on:click|once={toggleNav}
                                 href={navItem.anchor}
