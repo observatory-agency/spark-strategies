@@ -4,10 +4,12 @@ import svelte from '@astrojs/svelte';
 import image from '@astrojs/image';
 import storyblok from '@storyblok/astro';
 import { loadEnv } from 'vite';
-
+import sitemap from '@astrojs/sitemap';
 const env = loadEnv(import.meta.env.MODE, process.cwd(), 'STORYBLOK');
 
+// https://astro.build/config
 export default defineConfig({
+    site: 'https://sparkstrategies.co/',
     integrations: [
         tailwind(),
         svelte(),
@@ -25,5 +27,6 @@ export default defineConfig({
                 page: 'storyblok/Page',
             },
         }),
+        sitemap(),
     ],
 });
