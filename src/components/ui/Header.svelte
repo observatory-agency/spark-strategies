@@ -6,7 +6,7 @@
         { name: 'Services', anchor: '/#services' },
         { name: 'About Us', anchor: '/#about' },
         { name: 'Free Mini Trainings', anchor: '/#trainings' },
-        // { name: 'Resources', anchor: 'https://resources.sparkstrategies.co/' },
+        { name: 'Resources', anchor: 'https://resources.sparkstrategies.co/' },
         { name: 'Media Library', anchor: '/media-library' },
         { name: 'Blog', anchor: '/blog' },
     ];
