@@ -1,16 +1,27 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Hero from '../../components/ui/Hero.astro';
+
+import { useStoryblokApi } from '@storyblok/astro';
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
+
+const storyblokApi = useStoryblokApi();
+
+const { data } = await storyblokApi.get('cdn/stories/marketing-site/creative-services', {
+    version: import.meta.env.DEV ? 'draft' : 'published',
+});
+
+const content = data.story.content;
 ---
 
 <Layout>
-    <main class="mx-auto mt-28 sm:mt-32 max-w-7xl">
+    <main>
         <Hero
             title="Creative Services"
             description="Savvy strategy wrapped in gorgeous, modern, clean design. When you hire us, you get the best of both worlds: industry best practices with a creative edge. Interested in a project? Book a free 60 minute Studio Strategy Session with our team."
             ctaLink="/book-a-free-60-minute-studio-strategy-session"
             image="/creative-hero.png"
         />
-        <section></section>
+        <StoryblokComponent blok={content} />
     </main>
 </Layout>

@@ -12,6 +12,7 @@ module.exports = {
                 sparkOrange: '#E69649',
                 sparkBody: '#1C1917',
                 sparkHeader: '#292524',
+                sparkWhite: '#FBF9F8',
             },
             fontFamily: {
                 display: ['Mikela', 'sans-serif'],
