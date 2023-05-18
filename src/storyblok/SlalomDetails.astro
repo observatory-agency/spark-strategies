@@ -6,20 +6,24 @@ const content = renderRichText(blok.copy);
 
 <section {...storyblokEditable(blok)} class="my-16 lg:my-24">
     <div class="px-4 mx-auto max-w-7xl">
-        <div class="grid gap-12 md:grid-cols-2">
-            <div class={`${blok.text_side === 'left' ? 'order-1' : 'order-2'} self-center flow`}>
+        <div class="grid gap-12 lg:grid-cols-12">
+            <div
+                class={`${
+                    blok.text_side === 'left' ? 'order-1' : 'lg:order-2'
+                } self-center flow lg:col-span-7`}
+            >
                 <h2 class="text-2xl font-semibold sm:text-4xl font-body">{blok.title}</h2>
                 <div class="prose sm:prose-lg">
                     <Fragment set:html={content} />
                 </div>
                 <div class="prose">
                     <ul>
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="col-span-1">
+                        <div class="grid grid-cols-2 gap-10">
+                            <div class="col-span-1 space-y-4">
                                 <li>{blok.detail_1}</li>
                                 <li>{blok.detail_3}</li>
                             </div>
-                            <div class="col-span-1">
+                            <div class="col-span-1 space-y-4">
                                 <li>{blok.detail_2}</li>
                                 <li>{blok.detail_4}</li>
                             </div>
@@ -27,9 +31,34 @@ const content = renderRichText(blok.copy);
                     </ul>
                 </div>
             </div>
-            <div class={`${blok.text_side === 'left' ? 'order-2' : 'order-1'} relative img-shadow`}>
-                <img src={blok.image.filename} alt={blok.image.title} class="rounded-xl" />
+            <div
+                class={`${
+                    blok.text_side === 'left' ? 'order-2' : 'lg:order-1'
+                } relative img-shadow lg:col-span-5`}
+            >
+                <img
+                    src={blok.image.filename}
+                    alt={blok.image.title}
+                    class="object-cover object-center w-full rounded-xl"
+                />
             </div>
         </div>
     </div>
 </section>
+
+<style is:global>
+    /* li::marker {
+        content: url(/sparkle-red.svg);
+    } */
+    li {
+        position: relative;
+        list-style-type: none;
+    }
+
+    li::before {
+        content: url(/sparkle-red.svg);
+        position: absolute;
+        left: -8%;
+        top: 2%;
+    }
+</style>
