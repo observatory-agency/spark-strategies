@@ -29,6 +29,7 @@ export default defineConfig({
                 slalom: 'storyblok/Slalom',
                 slalom_with_details: 'storyblok/SlalomDetails',
                 background_wrapper: 'storyblok/BackgroundWrapper',
+                feature_2col_grid: 'storyblok/Feature2ColGrid',
             },
         }),
         sitemap(),
