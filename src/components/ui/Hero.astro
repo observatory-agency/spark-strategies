@@ -1,14 +1,13 @@
 ---
 import ActionBox from '../ui/ActionBox.astro';
-import CldImage from '../../components/ui/CldImage.astro';
 import BgPattern from '../ui/BgPattern.astro';
 
 let { title, description, ctaLink, image } = Astro.props;
 ---
 
-<section class="py-4 mb-[28rem] sm:mb-0 sm:overflow-hidden sm:py-20">
-    <div class="relative flex justify-end mx-auto max-w-7xl">
-        <div class="absolute left-0 top-56 sm:top-16">
+<section class="relative px-4 py-4 sm:mb-0 sm:py-20 mt-28 sm:mt-32 overflow-x-clip">
+    <div class="relative flex mx-auto lg:justify-end max-w-7xl">
+        <div class="left-0 lg:absolute top-56 sm:top-16">
             <ActionBox cta="Book now" link={ctaLink}>
                 <h1 class="text-3xl lg:text-[64px] leading-none font-extrabold">
                     {title}
@@ -16,6 +15,11 @@ let { title, description, ctaLink, image } = Astro.props;
                 <p class="mt-4 text-xl leading-normal">
                     {description}
                 </p>
+                <img
+                    src={image}
+                    alt={title}
+                    class="h-56 w-full mt-6 object-cover object-center rounded-[40px] lg:hidden"
+                />
             </ActionBox>
         </div>
         <div>
@@ -24,11 +28,11 @@ let { title, description, ctaLink, image } = Astro.props;
                 height="1300"
                 src={image}
                 alt={title}
-                class="max-w-4xl h-[600px] object-cover object-center rounded-[32px] hidden sm:block"
+                class="hidden max-w-4xl lg:h-[600px] object-cover object-center rounded-[32px] lg:block"
             />
         </div>
-        <BgPattern height="664" yOffset="-translate-y-10" />
     </div>
+    <BgPattern height="728" yOffset="-translate-y-10" />
 </section>
 
 <style lang="scss">

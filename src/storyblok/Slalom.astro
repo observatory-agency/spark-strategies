@@ -1,0 +1,27 @@
+---
+import { storyblokEditable, renderRichText } from '@storyblok/astro';
+const { blok } = Astro.props;
+const content = renderRichText(blok.copy);
+
+console.log(blok);
+---
+
+<section {...storyblokEditable(blok)} class="py-16 lg:py-24">
+    <div class="px-4 mx-auto max-w-7xl">
+        <div class="grid gap-12 lg:grid-cols-2">
+            <div class={`${blok.text_side === 'left' ? 'order-1' : 'lg:order-2'} self-center flow`}>
+                <h2 class="text-2xl font-semibold sm:text-4xl font-body">{blok.title}</h2>
+                <div class="prose sm:prose-lg">
+                    <Fragment set:html={content} />
+                </div>
+            </div>
+            <div
+                class={`${
+                    blok.text_side === 'left' ? 'order-2' : 'lg:order-1'
+                } relative img-shadow`}
+            >
+                <img src={blok.image.filename} alt={blok.image.title} class="rounded-xl" />
+            </div>
+        </div>
+    </div>
+</section>

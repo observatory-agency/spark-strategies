@@ -8,7 +8,11 @@ const content = renderRichText(blok.bio);
 <main {...storyblokEditable(blok)} class="py-12 mt-24">
     <section class="max-w-6xl px-4 mx-auto">
         <div class="grid grid-cols-2 gap-12">
-            <img src={blok.avatar.filename} alt={blok.name} class="object-cover object-center h-full rounded-lg shadow-md" />
+            <img
+                src={blok.avatar.filename}
+                alt={blok.name}
+                class="object-cover object-center h-full rounded-lg shadow-md"
+            />
             <div class="flow">
                 <h1 class="text-4xl">{blok.name}</h1>
                 <Fragment set:html={content} />
