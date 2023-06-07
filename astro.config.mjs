@@ -30,6 +30,7 @@ export default defineConfig({
                 slalom_with_details: 'storyblok/SlalomDetails',
                 background_wrapper: 'storyblok/BackgroundWrapper',
                 feature_2col_grid: 'storyblok/Feature2ColGrid',
+                Onboarding: 'storyblok/OnboardingPage',
             },
         }),
         sitemap(),

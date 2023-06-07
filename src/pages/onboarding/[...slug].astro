@@ -1,0 +1,32 @@
+---
+import LandingPage from '../../layouts/LandingPage.astro';
+import { useStoryblokApi } from '@storyblok/astro';
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
+
+export async function getStaticPaths() {
+    const storyblokApi = useStoryblokApi();
+    const { data } = await storyblokApi.get('cdn/stories/', {
+        version: 'published',
+        starts_with: 'onboarding/',
+    });
+
+    const pages = data.stories.map((story) => {
+        return {
+            params: {
+                slug: story.slug,
+            },
+            props: {
+                content: story.content,
+                authors: story.authors,
+            },
+        };
+    });
+    return pages;
+}
+
+const { content } = Astro.props;
+---
+
+<LandingPage title={`${content.title} | Spark Strategies`}>
+    <StoryblokComponent blok={content} />
+</LandingPage>
