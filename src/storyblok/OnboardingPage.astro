@@ -13,25 +13,25 @@ import Pete from '../img/team/pl.jpg';
 const { blok } = Astro.props;
 const content = renderRichText(blok.content);
 
-let days = [
+let steps = [
     {
-        day: '1',
+        step: '1',
         title: 'Handy Links',
         description:
             'Important links like how to access and use ClickUp, Google Drive and the Spark Resource Library',
     },
     {
-        day: '2',
+        step: '2',
         title: 'Meet our team',
-        description: 'An introduction to our team',
+        description: 'An introduction to our team that will guide you to success',
     },
     {
-        day: '3',
+        step: '3',
         title: 'Booking a session',
         description: 'How to book your first call on Nicole’s private calendar ',
     },
     {
-        day: '4',
+        step: '4',
         title: 'Your deliverables',
         description: 'The deliverables you can expect from us',
     },
@@ -91,7 +91,11 @@ let teamz = [
             <SparkLogo width="w-24" />
         </div>
         <div class="justify-end flex-1 hidden lg:flex">
-            <a href="#" class="font-semibold leading-6 text-sparkPeach"
+            <a
+                href={blok.hero_loom_link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-semibold leading-6 text-sparkPeach"
                 >Get started <span aria-hidden="true">&rarr;</span></a
             >
         </div>
@@ -103,7 +107,7 @@ let teamz = [
     <section class="bg-white">
         <div class="relative isolate">
             <div class="overflow-hidden">
-                <div class="px-6 pb-32 mx-auto max-w-7xl pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+                <div class="px-6 pt-20 pb-20 mx-auto max-w-7xl sm:pt-60 lg:px-8 lg:pt-32">
                     <div
                         class="max-w-2xl mx-auto gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center"
                     >
@@ -123,7 +127,7 @@ let teamz = [
                             >
                                 {blok.hero_copy}
                             </p>
-                            <div class="relative flex items-center mt-20 gap-x-6">
+                            <div class="relative flex items-center mt-12 xl:mt-20 gap-x-6">
                                 <a
                                     href={blok.hero_loom_link.url}
                                     target="_blank"
@@ -131,7 +135,9 @@ let teamz = [
                                     class="rounded-md pulse bg-sparkRaspberry px-6 py-2.5 font-semibold text-white shadow-sm hover:bg-sparkRaspberry/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sparkRaspberry"
                                     >A message from Nicole!</a
                                 >
-                                <div class="absolute -top-14 -left-12 text-sparkOrange">
+                                <div
+                                    class="absolute hidden xl:block -top-14 -left-12 text-sparkOrange"
+                                >
                                     <span class="font-bold">click me!</span>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -226,24 +232,24 @@ let teamz = [
                 This personalized onboarding page will walk you through our next steps.
             </h2>
         </div>
-        <div class="max-w-6xl px-4 mx-auto mt-6 sm:mt-12">
-            <div class="flex flex-col gap-4 lg:gap-36">
+        <div class="max-w-5xl px-4 mx-auto mt-6 sm:mt-12">
+            <div class="flex flex-col gap-4 lg:gap-40">
                 {
-                    days.map((day) => (
-                        <aside class="relative flex items-baseline max-w-lg gap-4 py-6 even:self-end">
+                    steps.map((step) => (
+                        <aside class="relative flex items-baseline max-w-lg gap-4 py-6 hide step-card even:self-end">
                             <span class="text-6xl font-semibold uppercase text-sparkRaspberry">
-                                {day.day}
+                                {step.step}
                             </span>
                             <div>
                                 <h4 class="text-2xl font-bold sm:text-3xl text-sparkHeader">
-                                    {day.title}
+                                    {step.title}
                                 </h4>
-                                <p class="text-sparkBody">{day.description}</p>
+                                <p class="text-sparkBody">{step.description}</p>
                             </div>
                         </aside>
                     ))
                 }
-                <div class="self-center mt-12">
+                <div class="self-center mt-12 final-step hide">
                     <div class="rounded-[40px] bg-sparkBlue shadow-lg px-8 py-10 max-w-2xl">
                         <div class="flow">
                             <p
@@ -257,7 +263,7 @@ let teamz = [
                                 To your brilliant future!
                             </p>
                             <span class="block text-center text-sparkPeach"
-                                ><span class="mb-1 text-5xl script text-sparkPeach">Nicole</span>
+                                ><span class="mb-1 text-5xl cursive text-sparkPeach">Nicole</span>
                                 <br /> &amp; the Spark Strategies Team</span
                             >
                         </div>
@@ -280,6 +286,7 @@ let teamz = [
                     you.
                 </p>
             </div>
+
             <ul
                 role="list"
                 class="grid max-w-2xl grid-cols-1 mx-auto gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2"
@@ -340,24 +347,32 @@ let teamz = [
             </div>
             <div class="max-w-2xl mx-auto mt-16 lg:max-w-none">
                 <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-                    <div class="flex flex-col bg-[#FFC999] p-8 rounded-2xl shadow-lg">
+                    <div class="flex flex-col">
                         <dt class="text-2xl font-semibold leading-7 text-sparkHeader">
                             <div
                                 class="flex items-center justify-center w-10 h-10 mb-6 rounded-lg bg-sparkBlue"
                             >
                                 <svg
-                                    class="w-6 h-6 text-sparkPeach"
+                                    xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
+                                    class="w-6 h-6"
                                 >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z"
-                                    ></path>
+                                    <g
+                                        fill="#fff"
+                                        fill-rule="evenodd"
+                                        clip-path="url(#a)"
+                                        clip-rule="evenodd"
+                                    >
+                                        <path
+                                            d="m2.25 18.3679 3.61549-2.7693c1.91992 2.5066 3.95882 3.6618 6.23081 3.6618 2.2594 0 4.2422-1.1418 6.0761-3.6286l3.6653 2.703c-2.6441 3.5854-5.9338 5.4797-9.7414 5.4797-3.79506 0-7.11519-1.8809-9.8463-5.4466Zm9.7828-12.03611L5.59783 11.8767 2.625 8.42669 12.0456.309082 21.393 8.43301l-2.9875 3.43739-6.3727-5.53861Z"
+                                        ></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="a">
+                                            <path fill="#fff" d="M0 .188965h24v24H0z"></path>
+                                        </clipPath>
+                                    </defs>
                                 </svg>
                             </div>
                             Clickup
@@ -369,67 +384,70 @@ let teamz = [
                                 smooth, efficient workflow throughout our partnership.
                             </p>
                             <p class="mt-6">
-                                <a href="#" class="text-base font-semibold leading-6 text-sparkBlue"
+                                <a
+                                    href={blok.clickup_link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-base font-semibold leading-6 text-sparkBlue"
                                     >Head over to ClickUp<span aria-hidden="true">→</span></a
                                 >
                             </p>
                         </dd>
                     </div>
-                    <div class="flex flex-col bg-[#FFC999] p-6 rounded-2xl shadow-lg">
-                        <dt
-                            class="flex items-center gap-6 text-2xl font-semibold leading-7 text-sparkHeader"
-                        >
+                    <div class="flex flex-col">
+                        <dt class="text-2xl font-semibold leading-7 text-sparkHeader">
                             <div
-                                class="flex items-center justify-center w-10 h-10 rounded-lg bg-sparkBlue"
+                                class="flex items-center justify-center w-10 h-10 mb-6 rounded-lg bg-sparkBlue"
                             >
                                 <svg
-                                    class="w-6 h-6 text-sparkPeach"
+                                    xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
+                                    class="w-6 h-6"
                                 >
                                     <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
+                                        fill="#ffffff"
+                                        d="M15.9193 2H8.0807L0 16.0911l3.8233 6.7785h16.3534L24 16.0911 15.9193 2ZM7.75513 16.0911l4.24907-7.32936 4.249 7.32936H7.75513Z"
                                     ></path>
                                 </svg>
                             </div>
                             Google Drive
                         </dt>
-                        <dd class="flex flex-col flex-auto mt-8 text-base leading-7 text-sparkBody">
+                        <dd class="flex flex-col flex-auto mt-2 text-base leading-7 text-sparkBody">
                             <p class="flex-auto">
                                 Google Drive will help us keep all our project-related digital
                                 assets organized and accessible, facilitating efficient
                                 collaboration and information sharing.
                             </p>
                             <p class="mt-6">
-                                <a href="#" class="text-base font-semibold leading-6 text-sparkBlue"
+                                <a
+                                    href={blok.drive_link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-base font-semibold leading-6 text-sparkBlue"
                                     >Checkout your new Google Drive <span aria-hidden="true">→</span
                                     ></a
                                 >
                             </p>
                         </dd>
                     </div>
-                    <div class="flex flex-col bg-[#FFC999] p-8 rounded-2xl shadow-lg">
+                    <div class="flex flex-col">
                         <dt class="text-2xl font-semibold leading-7 text-sparkHeader">
                             <div
                                 class="flex items-center justify-center w-10 h-10 mb-6 rounded-lg bg-sparkBlue"
                             >
                                 <svg
-                                    class="w-6 h-6 text-sparkPeach"
+                                    xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
+                                    class="w-6 h-6"
                                 >
                                     <path
+                                        stroke="#ffffff"
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
-                                        d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                                        stroke-width="3"
+                                        d="M12 6.23097c-1.6484-1.47864-3.7856-2.29505-6-2.292-1.052 0-2.062.18-3 .512V18.701c.96362-.34 1.97816-.5132 3-.512 2.305 0 4.408.867 6 2.292m0-14.25003c1.6483-1.47872 3.7856-2.29515 6-2.292 1.052 0 2.062.18 3 .512V18.701c-.9636-.34-1.9782-.5132-3-.512-2.2144-.0031-4.3516.8133-6 2.292m0-14.25003V20.481"
                                     ></path>
                                 </svg>
                             </div>
@@ -485,8 +503,9 @@ let teamz = [
                             you've completed your Deep Dive, you're ready to book your first call!
                         </p>
                         <a
-                            href="/book-a-free-60-minute-studio-strategy-session"
+                            href={blok.deep_dive_link.url}
                             target="_blank"
+                            rel="noopener noreferrer"
                             class="items-center hidden px-8 py-2 mt-12 font-semibold tracking-widest rounded shadow-sm sm:inline-flex text-sparkPeach bg-sparkRaspberry font-body border-secondaryColor text-secondaryColor hover:bg-sparkRaspberry/80 focus:outline-none focus:ring-2 focus:ring-sparkRaspberry focus:ring-offset-2"
                         >
                             Pre-Coaching Deep Dive
@@ -504,11 +523,11 @@ let teamz = [
                         </div>
                         <div class="max-w-2xl mx-auto sm:mx-0 sm:max-w-none">
                             <img
-                                src="/calendar.png"
-                                alt="Product screenshot"
+                                src="/cal.jpg"
+                                alt="Calendly Calendar Screenshot"
                                 width="2432"
                                 height="1442"
-                                class="-mb-12 w-[57rem] max-w-none rounded-tl-xl bg-gray-800 ring-1 ring-white/10"
+                                class="-mb-12 w-[40rem] max-w-none rounded-tl-xl bg-gray-800 ring-1 ring-white/10"
                             />
                         </div>
                         <div
@@ -522,6 +541,22 @@ let teamz = [
         </div>
     </section>
 </main>
+
+<script is:inline>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hide');
+hiddenElements.forEach((element) => {
+    observer.observe(element);
+});
+</script>
 
 <style lang="scss">
     .pulse {
@@ -586,6 +621,40 @@ let teamz = [
                 background-position: center;
                 background-repeat: no-repeat;
             }
+        }
+    }
+
+    .hide {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 1s ease-in-out;
+    }
+
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+
+    .step-card:nth-child(2) {
+        transition-delay: 200ms;
+    }
+
+    .step-card:nth-child(3) {
+        transition-delay: 400ms;
+    }
+
+    .step-card:nth-child(4) {
+        transition-delay: 600ms;
+    }
+    .final-step {
+        transition-delay: 800ms;
+    }
+
+    @media (prefers-reduced-motion) {
+        .hide {
+            transition: none;
         }
     }
 </style>
