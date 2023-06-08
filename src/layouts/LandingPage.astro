@@ -1,6 +1,8 @@
 ---
 import '../styles/fonts.css';
 import '../styles/global.css';
+
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -12,7 +14,7 @@ import '../styles/global.css';
         <meta name="generator" content={Astro.generator} />
 
         <!-- Primary Meta Tags -->
-        <title>Book a Free 60 Minute Studio Strategy Session | Spark Strategies</title>
+        <title>{title}</title>
         <meta
             name="title"
             content="Book a Free 60 Minute Studio Strategy Session | Spark Strategies"
