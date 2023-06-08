@@ -28,12 +28,7 @@ let steps = [
     {
         step: '3',
         title: 'Booking a session',
-        description: 'How to book your first call on Nicole’s private calendar ',
-    },
-    {
-        step: '4',
-        title: 'Your deliverables',
-        description: 'The deliverables you can expect from us',
+        description: 'How to book your first call on our private calendar ',
     },
 ];
 
@@ -133,8 +128,8 @@ let teamz = [
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     class="rounded-md pulse bg-sparkRaspberry px-6 py-2.5 font-semibold text-white shadow-sm hover:bg-sparkRaspberry/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sparkRaspberry"
-                                    >A message from Nicole!</a
-                                >
+                                    >A message from our team!
+                                </a>
                                 <div
                                     class="absolute hidden xl:block -top-14 -left-12 text-sparkOrange"
                                 >
@@ -425,7 +420,8 @@ let teamz = [
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     class="text-base font-semibold leading-6 text-sparkBlue"
-                                    >Checkout your new Google Drive <span aria-hidden="true">→</span
+                                    >Check out your new Google Drive <span aria-hidden="true"
+                                        >→</span
                                     ></a
                                 >
                             </p>
@@ -597,11 +593,11 @@ hiddenElements.forEach((element) => {
 
     aside {
         @media (min-width: 768px) {
-            &:nth-last-child(odd)::after {
+            &:nth-last-child(even)::after {
                 content: url('/patterns/arrow-right.svg');
                 position: absolute;
                 top: calc(100% - -1rem);
-                left: calc(100% - 15rem);
+                left: calc(100% - 25rem);
                 width: 100%;
                 height: 100%;
                 z-index: -1;
@@ -609,7 +605,7 @@ hiddenElements.forEach((element) => {
                 background-position: center;
                 background-repeat: no-repeat;
             }
-            &:nth-last-child(even)::after {
+            &:nth-last-child(odd)::after {
                 content: url('/patterns/arrow-left.svg');
                 position: absolute;
                 top: calc(100% - -1rem);
@@ -644,12 +640,8 @@ hiddenElements.forEach((element) => {
     .step-card:nth-child(3) {
         transition-delay: 400ms;
     }
-
-    .step-card:nth-child(4) {
-        transition-delay: 600ms;
-    }
     .final-step {
-        transition-delay: 800ms;
+        transition-delay: 600ms;
     }
 
     @media (prefers-reduced-motion) {
