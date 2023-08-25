@@ -4,9 +4,9 @@ import CldImage from '../../components/ui/CldImage.astro';
 import BgPattern from '../ui/BgPattern.astro';
 ---
 
-<section class="py-4 mb-[28rem] sm:mb-0 sm:overflow-hidden sm:py-20">
+<section class="py-4 relative mb-[16rem] sm:mb-0 sm:overflow-hidden sm:py-20 lg:pt-56 bg-stone-50">
     <div class="relative flex justify-end mx-auto max-w-7xl">
-        <div class="absolute left-0 top-56 sm:top-16">
+        <div class="absolute left-0 z-50 top-56 sm:top-16">
             <ActionBox cta="Book now" link="/book-a-free-60-minute-studio-strategy-session">
                 <h1 class="text-3xl lg:text-[60px] leading-none font-extrabold">
                     Your studio's growth is our <span class="relative z-10 font-display brush"
@@ -20,19 +20,19 @@ import BgPattern from '../ui/BgPattern.astro';
                 </p>
             </ActionBox>
         </div>
-        <div>
+        <div class="relative z-30">
             <CldImage
                 width="1912"
                 height="1300"
                 src="clients/spark-strategies/lp-hero.jpg"
                 alt="Yoga class"
-                class="rounded-tl-lg rounded-tr-lg sm:hidden"
+                class="rounded-tl-lg rounded-tr-lg lg:hidden"
             />
             <video
                 muted
                 autoplay
                 loop
-                class="max-w-4xl h-[600px] object-cover object-center rounded-[32px] hidden sm:block"
+                class="max-w-4xl h-[600px] object-cover object-center rounded-[32px] hidden lg:block"
             >
                 <source
                     src="https://res.cloudinary.com/observatory-agency/video/upload/f_auto/q_auto/v1679343655/clients/spark-strategies/hero_zszy3b.mp4"
@@ -40,8 +40,8 @@ import BgPattern from '../ui/BgPattern.astro';
                 />
             </video>
         </div>
-        <BgPattern height="664" yOffset="-translate-y-10" />
     </div>
+    <BgPattern height="800" yOffset="-translate-y-10" />
 </section>
 
 <style lang="scss">

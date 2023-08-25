@@ -21,7 +21,7 @@
 
     let offset = 0;
     let tolerance = 0;
-    let headerClass = 'bg-primaryColor';
+    let headerClass = 'bg-sparkHeader';
     let y = 0;
     let lastY = 0;
 
@@ -32,11 +32,11 @@
     function deriveClass(y, dy) {
         // show if at the top of page
         if (y < offset) {
-            return 'bg-primaryColor';
+            return 'bg-sparkHeader';
         }
 
         if (y === 0) {
-            return 'bg-primaryColor';
+            return 'bg-sparkHeader';
         }
 
         // don't change the state unless scroll delta
@@ -47,11 +47,11 @@
 
         // if scrolling up, show
         if (dy < 0) {
-            return 'bg-white shadow';
+            return 'bg-sparkHeader shadow';
         }
 
         // if scrolling down, hide
-        return 'bg-white shadow';
+        return 'bg-sparkHeader shadow';
     }
 
     function updateClass(y) {
@@ -100,7 +100,7 @@
                 </a>
                 <div class="hidden gap-6 text-lg lg:flex">
                     {#each navItems as navItem}
-                        <a href={navItem.anchor}>{navItem.name}</a>
+                        <a href={navItem.anchor} class="text-sparkWhite">{navItem.name}</a>
                     {/each}
                 </div>
                 <!-- <button
@@ -133,7 +133,7 @@
                             <div
                                 class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5"
                             >
-                                <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
+                                <div class="relative grid gap-6 px-5 py-6 bg-sparkHeader sm:gap-8 sm:p-8">
                                     <a
                                         href="https://resources.sparkstrategies.co"
                                         class="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50"
@@ -250,14 +250,14 @@
                 class="absolute z-[50] transition transform origin-top-right w-full sm:w-[inherit] sm:max-w-sm left-0 sm:left-[inherit] sm:right-0"
             >
                 <div
-                    class="p-6 bg-white divide-y-2 rounded-bl-lg rounded-br-lg shadow-2xl ring-1 ring-black ring-opacity-5 divide-gray-50"
+                    class="p-6 divide-y-2 rounded-bl-lg rounded-br-lg shadow-2xl bg-sparkHeader ring-1 ring-black ring-opacity-5 divide-gray-50"
                 >
                     <div class="flex flex-col items-start space-y-4">
                         {#each navItems as navItem}
                             <a
                                 on:click|once={toggleNav}
                                 href={navItem.anchor}
-                                class="text-lg font-medium text-primaryColor font-body"
+                                class="text-lg font-medium text-sparkWhite font-body"
                             >
                                 {navItem.name}
                             </a>
@@ -292,16 +292,16 @@
         position: absolute;
         width: 32px;
         height: 2.25px;
-        background: #1c1917;
+        background: #fbf9f8;
         border-radius: 9999px;
     }
-    .bg-white .nav-trigger span,
-    .bg-white .nav-trigger span::before,
-    .bg-white .nav-trigger span::after {
+    .bg-sparkHeader .nav-trigger span,
+    .bg-sparkHeader .nav-trigger span::before,
+    .bg-sparkHeader .nav-trigger span::after {
         position: absolute;
         width: 32px;
         height: 2.25px;
-        background: #1c1917;
+        background: #fbf9f8;
         border-radius: 9999px;
     }
 
