@@ -65,6 +65,53 @@
 <svelte:window bind:scrollY={y} />
 
 <header class="fixed top-0 z-[100] w-full {headerClass}">
+    <div
+        class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1"
+    >
+        <div
+            class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+            aria-hidden="true"
+        >
+            <div
+                class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#FFF5EC] to-[#D881AB] opacity-30"
+                style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"
+            ></div>
+        </div>
+        <div
+            class="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+            aria-hidden="true"
+        >
+            <div
+                class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#FFF5EC] to-[#D881AB] opacity-30"
+                style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"
+            ></div>
+        </div>
+        <a
+            href="https://resources.sparkstrategies.co/landing-pages/the-profitable-studio-accelerator-24"
+        >
+            <p class="text-sm leading-6 text-sparkHeader">
+                Ready to GROW? The Profitable Studio Accelerator Group Coaching Program is
+                <span class="whitespace-nowrap font-semibold"
+                    >LIVE!&nbsp;<span aria-hidden="true">&rarr;</span>
+                </span>
+            </p></a
+        >
+        <div class="flex flex-1 justify-end">
+            <button type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]">
+                <span class="sr-only">Dismiss</span>
+                <svg
+                    class="h-5 w-5 text-sparkHeader"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
+                    ></path>
+                </svg>
+            </button>
+        </div>
+    </div>
     <nav class="relative mx-auto max-w-7xl max-xl:px-4" aria-label="Top">
         <div class="flex items-center justify-between w-full py-4">
             <div class="flex items-center space-x-6">
@@ -316,7 +363,9 @@
         content: '';
         top: 0;
         left: 0;
-        transition: background 0.3s, transform 0.3s;
+        transition:
+            background 0.3s,
+            transform 0.3s;
     }
 
     .nav-trigger span::before {
