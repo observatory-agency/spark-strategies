@@ -96,7 +96,7 @@
             <a
                 href="https://resources.sparkstrategies.co/landing-pages/the-profitable-studio-accelerator-24"
             >
-                <p class="text-sm leading-6 text-sparkHeader">
+                <p class="leading-6 text-sparkHeader">
                     Ready to GROW? The Profitable Studio Accelerator Group Coaching Program is
                     <span class="whitespace-nowrap font-semibold"
                         >LIVE!&nbsp;<span aria-hidden="true">&rarr;</span>
