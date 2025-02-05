@@ -3,34 +3,28 @@ import ActionBox from '../../components/ui/ActionBox.astro';
 
 let days = [
     {
-        day: 'Day 1',
-        title: 'The Motivation Mindset',
+        day: 'Step 1',
+        title: '1:1 Guidance',
         description:
-            'How to prioritize and clear the space you need in your schedule and in your mind to be the creator and leader you were meant to be.',
+            'Unlimited private Voxer coaching with your Business Consultant for 16 weeks',
     },
     {
-        day: 'Day 2',
-        title: 'A Powerful Product',
+        day: 'Step 2',
+        title: 'Peer Support',
         description:
-            "How to level up your product: the offerings themselves. We hate to break it to you, but your regular ol' classes just won't cut it in the long run.",
+            "Access to a private Profitable Studio Accelerator FB group for access to Nicole, Justicia and your peers",
     },
     {
-        day: 'Day 3',
-        title: 'Perfect Pricing',
+        day: 'Step 3',
+        title: 'Industry Best Practices (course)',
         description:
-            "The pricing strategy that's working right. now. in today's brand new market. Hint: it isn't measuring yourself up against your competition.",
+            "Lifetime access to The Profitable Studio Accelerator course",
     },
     {
-        day: 'Day 4',
-        title: 'Staff Synergy',
+        day: 'Step 4',
+        title: 'Downloadable Templates',
         description:
-            'How to motivate your team into real ACTION. Shiny, happy staff = shiny, happy clients.',
-    },
-    {
-        day: 'Day 5',
-        title: 'Mindful Marketing',
-        description:
-            'Actionable strategy you can implement TODAY to generate new leads and keep prospective clients from slipping through the cracks.',
+            'Proven templates, spreadsheets, sales scripts and guides to help you dial in your systems and finally get organized!',
     },
 ];
 ---
@@ -38,13 +32,12 @@ let days = [
 <section id="profitable-studio-masterclass" class="relative py-12 bg sm:py-24 scroll-mt-16">
     <div class="px-4 sm:text-center flow">
         <h2 class="text-3xl font-extrabold sm:text-5xl text-sparkHeader">
-            The Five Day Profitable Studio <span class="relative font-display brush"
-                >Masterclass</span
+            The Profitable Studio  <span class="relative font-display brush"
+                >Accelerator</span
             >
         </h2>
         <p class="mx-auto max-w-prose">
-            Ready to get your studio out of survival mode without breaking the bank? Inside the 5
-            Day Profitable Studio Masterclass you'll find:
+            This program is tried-and-true, tested hundreds of times over. Shorten the learning curve and build a powerful brand, price strategically, analyze your metrics, make strong marketing decisions and SO much more. This program is jam-packed with insight from Nicole's own studio experience and her work with hundreds of boutique fitness businesses across the world.
         </p>
     </div>
     <div class="max-w-6xl px-4 mx-auto mt-6 sm:mt-12">
@@ -60,20 +53,18 @@ let days = [
                     </aside>
                 ))
             }
-            <div class="self-end mt-12">
+            <div class="self-start mt-12">
                 <ActionBox
-                    cta="Get access"
-                    link="https://nicole-d-andrea-s-school.teachable.com/purchase?product_id=4964906"
+                    cta="Learn More"
+                    link="https://resources.sparkstrategies.co/landing-pages/the-profitable-studio-accelerator-24"
                     full={true}
                 >
                     <div class="flow">
                         <h4 class="text-5xl font-extrabold text-center font-display">
-                            $99<span class="text-sm font-body">usd</span>
+                            Investment in you!
                         </h4>
                         <p class="text-lg leading-normal text-center sm:text-xl">
-                            You'll get all the recordings, so you can move at your own pace, but our
-                            guess is you'll want to move FAST. You'll also find PDFs, chock full of
-                            the type of homework that actually yields RESULTS.
+                            Is it time to STOP the struggle? In this container, you'll learn industry best practices for branding, pricing, sales, staff management and marketing to get your studio business running like a well-oiled profit machine!
                         </p>
                     </div>
                 </ActionBox>
@@ -121,7 +112,7 @@ let days = [
 
     aside {
         @media (min-width: 768px) {
-            &:nth-last-child(even)::after {
+            &:nth-last-child(odd)::after {
                 content: url('/patterns/arrow-right.svg');
                 position: absolute;
                 top: calc(100% - -1rem);
@@ -133,7 +124,7 @@ let days = [
                 background-position: center;
                 background-repeat: no-repeat;
             }
-            &:nth-last-child(odd)::after {
+            &:nth-last-child(even)::after {
                 content: url('/patterns/arrow-left.svg');
                 position: absolute;
                 top: calc(100% - -1rem);
