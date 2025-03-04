@@ -1,5 +1,5 @@
 [build]
-command = "npm install --no-save --platform=linux --arch=x64 sharp && pnpm run build"
+command = "npm install && npm run build"
 publish = "dist"
 
 [build.environment]
