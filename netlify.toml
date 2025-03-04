@@ -1,0 +1,6 @@
+[build]
+command = "pnpm install --platform=linux --arch=x64 sharp && pnpm run build"
+publish = "dist"
+
+[build.environment]
+SHARP_IGNORE_GLOBAL_LIBVIPS = "true"
