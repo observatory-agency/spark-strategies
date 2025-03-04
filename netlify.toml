@@ -1,7 +1,6 @@
 [build]
-command = "pnpm config set enable-pre-post-scripts true && pnpm config set ignore-scripts false && pnpm install -f && pnpm run build"
+command = "npm install --no-save --platform=linux --arch=x64 sharp && pnpm run build"
 publish = "dist"
 
 [build.environment]
 SHARP_IGNORE_GLOBAL_LIBVIPS = "true"
-SHARP_DIST_BASE_URL = "https://sharp-assets.s3.amazonaws.com/"
