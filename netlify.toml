@@ -1,6 +1,7 @@
 [build]
-command = "pnpm install --platform=linux --arch=x64 sharp && pnpm run build"
+command = "SHARP_FORCE_INSTALL=true pnpm install && pnpm rebuild sharp --force && pnpm run build"
 publish = "dist"
 
 [build.environment]
 SHARP_IGNORE_GLOBAL_LIBVIPS = "true"
+SHARP_INSTALL_FORCE = "true"
