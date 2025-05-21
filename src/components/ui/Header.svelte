@@ -286,7 +286,7 @@
             </div>
             <div class="flex items-center gap-4 sm:gap-8">
                 <a
-                    href="/book-a-free-30-minute-studio-strategy-session"
+                    href="https://calendly.com/spark-strategies-team/spark-strategies-discovery-call"
                     target="_blank"
                     class="items-center hidden px-8 py-2 font-semibold tracking-widest rounded shadow-sm sm:inline-flex text-sparkPeach bg-sparkBlue font-body border-secondaryColor text-secondaryColor hover:bg-sparkBlueDark hover:text-primaryColor focus:outline-none focus:ring-2 focus:ring-secondaryColorDark focus:ring-offset-2"
                 >
