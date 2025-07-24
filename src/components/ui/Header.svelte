@@ -3,9 +3,10 @@
     import { cubicOut } from 'svelte/easing';
 
     let navItems = [
-        { name: 'Services', anchor: '/#services' },
-        { name: 'About Us', anchor: '/#about' },
-        { name: 'Free Mini Trainings', anchor: '/#trainings' },
+        {
+            name: 'Lead Gen Challenge',
+            anchor: 'https://resources.sparkstrategies.co/landing-pages/lead-gen-launchpad',
+        },
         { name: 'Resources', anchor: 'https://resources.sparkstrategies.co/' },
         { name: 'Media Library', anchor: '/media-library' },
         { name: 'Blog', anchor: '/blog' },
